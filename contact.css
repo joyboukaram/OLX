@@ -1,0 +1,45 @@
+body{
+    background-image: url("images/contact.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 50%;
+    color: brown;
+    font-family: cursive;
+  
+}
+
+#box{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+h1{
+    margin-left: 35%;
+  
+}
+
+h2{
+    margin-left: 40%;
+}
+#joy{
+    margin-top: 23%;
+}
+
+img{
+    height: 28%;
+}
+
+#joy_image{
+    margin-top: 37%;
+    margin-bottom: 6%;
+}
+
+#back{
+    float: right;
+    width: 3%;
+    margin-right: 2%;
+    margin-top: 5%;
+    
+    
+
+}
