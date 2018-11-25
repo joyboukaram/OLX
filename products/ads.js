@@ -1,12 +1,12 @@
 const ad = document.querySelector("#ad");
 
 ad.addEventListener("click", event => {
-  window.open("ad.html", "_self");
+  window.open("ad.php", "_self");
 })
 
 const cart = document.querySelector("#cart");
 cart.addEventListener("click", event => {
-  window.open("cart.html", "_self");
+  window.open("cart.php", "_self");
 })
 
 const searchpic = document.querySelector("#searchpic");
@@ -18,6 +18,6 @@ searchpic.addEventListener("click", event => {
 const product = document.querySelectorAll(".images_ads");
 for (let i = 0; i < product.length; i++) {
   product[i].addEventListener("click", event => {
-      window.open("my_ad_edit.html", "_self");
+      window.open("my_ad_edit.php", "_self");
   })
 }

@@ -1,37 +1,40 @@
 <html>
 
-<title>Product</title>
-<link rel="stylesheet" href="product.css">
-<script src="product.js" defer></script>
+<title> My Product</title>
+<link rel="stylesheet" href="my_product.css">
+<script src="my_product.js" defer></script>
 </head>
 
 <body>
     <header>
         Made by Joy & Joseph
         <span id="head">
-            <a href="../account/account.html">My Account</a>
+            <a href="../account/account.php">My Account</a>
             /
-            <img class="icons" src="../images/shopping_cart.png" id = "cart">
+            <a href="">Checkout</a>
             /
-            <img class="icons" src="../images/search.png" id = "searchpic">
+            <img class="icons" src="../shopping_cart.png" href="">
+            /
+            <img class="icons" src="../search.png" href="">
         </span>
 
     </header>
 
     <nav>
-        <a href="../home.html"><img id="logo" src="../images/olx.png" /></a>
+        <a href="../home.php"><img id="logo" src="../logo.png" /></a>
 
-        <form method="GET" action="search/search.html">
+        <form method="GET" action="search/search.php">
             <input id="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
 
-        <button id="ad" href="">+ Place an ad</button>
+        <button id="ad">+ Place an ad</button>
 
         <div id="nav">
-            <a href="../home.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="../contact.html">Contact</a>
+            <a href="../home.php">Home</a>
+            <a href="../account/shop.php">Shop</a>
+            <a>About Us</a>
+            <a href="../contact.php">Contact</a>
         </div>
     </nav>
 
@@ -52,19 +55,21 @@
                 <li>blablabla</li><br>
                 <li>blablabla</li><br>
                 <li>blablabla</li><br>
-
-
+                
+                
                 <li>blablabla</li><br>
                 <li>blablabla</li>
             </ul>
             <h3><i>Seller:</i> person</h3>
             <form method="POST">
-                <button class="add_to_cart"><img width="8%" src="../images/cart.png"> Buy now</button>
+                <button id="edit">Edit Ad</button>
+                
+            </form>
 
-            </form>
             <form method="GET">
-                <button class="add_to_cart" id = "remove_from_cart"><b>X</b> Remove from cart</button>
+                    <button id="edit">Delete Ad</button>
             </form>
+
         </div>
     </section>
 

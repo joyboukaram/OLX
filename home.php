@@ -1,5 +1,12 @@
 <html>
+<?php
+session_start();
+if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
+{
+	header("Location:index.php");
+}
 
+?>
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
@@ -10,7 +17,7 @@
     <header>
         Made by Joy & Joseph
         <span id="head">
-            <a href="account/account.html">My Account</a>
+            <a href="account/account.php">My Account</a>
             /
             <img class="icons" src="images/shopping_cart.png" id = "cart">
             /
@@ -20,9 +27,9 @@
     </header>
 
     <nav>
-        <a href="home.html"><img id="logo" src="images/olx.png" /></a>
+        <a href="home.php"><img id="logo" src="images/olx.png" /></a>
 
-        <form method="GET" action="search/search.html">
+        <form method="GET" action="search/search.php">
             <input id="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
@@ -31,8 +38,8 @@
 
         <div id="nav">
             <a href="">Home</a>
-            <a href="products/shop.html">Shop</a>
-            <a href="contact.html" id="contact">Contact</a>
+            <a href="products/shop.php">Shop</a>
+            <a href="contact.php" id="contact">Contact</a>
         </div>
 
     </nav>
@@ -82,7 +89,7 @@
 
     <div id="latest">
         <h2>Latest Products</h2>
-        <div id="products">     
+        <div id="products">
             <!-- 10 ITEMS -->
             <img class="items open_image" src="images/beanie.jpg">
             <img class="items open_image" src="images/beanie.jpg">

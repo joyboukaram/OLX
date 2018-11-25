@@ -1,12 +1,12 @@
 const ad = document.querySelector("#ad");
 
 ad.addEventListener("click", event => {
-  window.open("ad.html", "_self");
+  window.open("ad.php", "_self");
 })
 
 const cart = document.querySelector("#cart");
 cart.addEventListener("click", event => {
-  window.open("cart.html", "_self");
+  window.open("cart.php", "_self");
 })
 
 const searchpic = document.querySelector("#searchpic");
@@ -26,5 +26,5 @@ add_to_cart.addEventListener("click", event => {
 })
 
 go_to_cart.addEventListener("click", event => {
-  window.open("cart.html", "_self");
+  window.open("cart.php", "_self");
 })

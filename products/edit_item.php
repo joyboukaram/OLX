@@ -17,7 +17,7 @@
     <div id="box">
 
         <div id="border">
-            <form method="POST" action="my_ads.html">
+            <form method="POST" action="my_ads.php">
                 <input class="input" type="text" placeholder="item name">
                 <input class="input" type="number" value="1" min="0" step="0.01" class="currecy">
                 <input class="input" type="text" placeholder="description">

@@ -10,7 +10,7 @@
     <header>
         Made by Joy & Joseph
         <span id="head">
-            <a href="../account/account.html">My Account</a>
+            <a href="../account/account.php">My Account</a>
             /
             <img class="icons" src="../images/shopping_cart.png" id = "cart">
             /
@@ -20,9 +20,9 @@
     </header>
 
     <nav>
-        <a href="home.html"><img id="logo" src="../images/olx.png" /></a>
+        <a href="home.php"><img id="logo" src="../images/olx.png" /></a>
 
-        <form method="GET" action="search/search.html">
+        <form method="GET" action="search/search.php">
             <input id="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
@@ -30,9 +30,9 @@
         <button id="ad">+ Place an ad</button>
 
         <div id="nav">
-            <a href="../home.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="../contact.html">Contact</a>
+            <a href="../home.php">Home</a>
+            <a href="shop.php">Shop</a>
+            <a href="../contact.php">Contact</a>
         </div>
 
     </nav>

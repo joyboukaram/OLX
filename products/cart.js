@@ -1,7 +1,7 @@
 const image = document.querySelectorAll(".prod_image");
 for (let i = 0; i < image.length; i++) {
     image[i].addEventListener("click", event => {
-        window.open("buy_product.html", "_self");
+        window.open("buy_product.php", "_self");
     })
 }
 
@@ -14,5 +14,5 @@ searchpic.addEventListener("click", event => {
 
 const ad = document.querySelector("#ad");
 ad.addEventListener("click", event => {
-  window.open("../products/ad.html", "_self");
+  window.open("../products/ad.php", "_self");
 });

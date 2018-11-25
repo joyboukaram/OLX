@@ -37,5 +37,5 @@ searchpic.addEventListener("click", event => {
 
 const ad = document.querySelector("#ad");
 ad.addEventListener("click", event => {
-  window.open("login/login.html", "_self");
+  window.open("login/login.php", "_self");
 });

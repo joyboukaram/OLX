@@ -4,7 +4,7 @@ const image = document.querySelectorAll(".new_image");
 
 for (let i = 0; i < image.length; i++) {
     image[i].addEventListener("click", event => {
-        window.open("../products/product.html", "_self");
+        window.open("../products/product.php", "_self");
     })
 }
 
@@ -118,12 +118,12 @@ filter.addEventListener("click", event => {
 
 const ad = document.querySelector("#ad");
 ad.addEventListener("click", event => {
-  window.open("ad.html", "_self");
+  window.open("ad.php", "_self");
 });
 
 const cart = document.querySelector("#cart");
 cart.addEventListener("click", event => {
-  window.open("cart.html", "_self");
+  window.open("cart.php", "_self");
 })
 
 const searchpic = document.querySelector("#searchpic");

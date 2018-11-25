@@ -10,7 +10,7 @@
 
     <h1>Edit your Information</h1>
     
-    <form method="POST" action="account.html">
+    <form method="POST" action="account.php">
             <input class="input" type="text" placeholder="first name" name="first_name">
             <input class="input" type="text" placeholder="last name" name="last_name">
             <input class="input" type="text" placeholder="phone" name="phone number">

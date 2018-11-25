@@ -9,7 +9,7 @@
     <header>
         Made by Joy & Joseph
         <span id="head">
-            <a href="../account/account.html">My Account</a>
+            <a href="../account/account.php">My Account</a>
             /
             <img class="icons" src="../images/shopping_cart.png" id="cart">
             /
@@ -19,9 +19,9 @@
     </header>
 
     <nav>
-        <a href="../home.html"><img id="logo" src="../images/olx.png" /></a>
+        <a href="../home.php"><img id="logo" src="../images/olx.png" /></a>
 
-        <form method="GET" action="search/search.html">
+        <form method="GET" action="search/search.php">
             <input id="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
@@ -29,9 +29,9 @@
         <button id="ad" href="">+ Place an ad</button>
 
         <div id="nav">
-            <a href="../home.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="../contact.html">Contact</a>
+            <a href="../home.php">Home</a>
+            <a href="shop.php">Shop</a>
+            <a href="../contact.php">Contact</a>
         </div>
     </nav>
 
@@ -58,11 +58,11 @@
                 <li>blablabla</li>
             </ul>
             <h3><i>Seller:</i> person</h3>
-            <form method="POST" action="edit_item.html">
+            <form method="POST" action="edit_item.php">
                 <button class="add_to_cart">Edit Item</button>
 
             </form>
-            <form method="POST" action="my_ads.html">
+            <form method="POST" action="my_ads.php">
                 <button class="add_to_cart" id="remove_from_cart"><b>X</b> Delete Item</button>
                 </div>
             </form>

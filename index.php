@@ -7,9 +7,9 @@
 <header>
     Made by Joy & Joseph
     <span id="head">
-        <a href="./login/login.html">Sign in</a>
+        <a href="./login/login.php">Sign in</a>
         /
-       <a href="login/login.html"> <img class="icons" id = "shopping_cart" src="images/shopping_cart.png"></a>
+       <a href="login/login.php"> <img class="icons" id = "shopping_cart" src="images/shopping_cart.png"></a>
         /
         <img class="icons" id = "searchpic" src="images/search.png">
     </span>
@@ -17,9 +17,9 @@
 </header>
 
 <nav>
-    <a href="index.html"><img id="logo" src="images/olx.png" /></a>
+    <a href="index.php"><img id="logo" src="images/olx.png" /></a>
 
-    <form method="GET" action="search/search.html">
+    <form method="GET" action="search/search.php">
         <input id="search" type="text" placeholder="Search for your item...">
         <input id="submit" type="submit" value="Search">
     </form>
@@ -28,8 +28,8 @@
 
     <div id="nav">
         <a href="">Home</a>
-        <a href="login/login.html">Shop</a>
-        <a href="./contact.html">Contact</a>
+        <a href="login/login.php">Shop</a>
+        <a href="./contact.php">Contact</a>
     </div>
 
 </nav>

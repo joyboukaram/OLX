@@ -1,5 +1,12 @@
 <html>
+<?php
+session_start();
+if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
+{
+	header("Location:index.php");
+}
 
+?>
 <head>
     <title>Place an Ad</title>
     <link rel="stylesheet" href="ad.css">
@@ -17,12 +24,12 @@
     <div id="box">
 
         <div id="border">
-            <form method="POST" action="">
-                <input class="input" type="text" placeholder="item name" required>
-                <input class="input" type="number" value="1" min="0" step="0.01" class="currecy" required>
-                <input class="input" type="text" placeholder="description" required>
-                <input class="input" type="text" placeholder="location" required>
-                <select class="input" required>
+            <form method="POST" action="upload.php" novalidate="novalidate" enctype="multipart/form-data">
+                <input class="input" type="text" name="name" placeholder="item name" required>
+                <input class="input" type="number" name="price" value="1" min="0" step="0.01" class="currecy" required>
+                <input class="input" type="text" name="description" placeholder="description" required>
+                <input class="input" type="text" name="location" placeholder="location" required>
+                <select class="input" name="category" required>
                     <option value="accessories">Accessories</option>
                     <option value="cars">Cars</option>
                     <option value="children">Children Gadgets</option>
@@ -34,8 +41,9 @@
                     <option value="women">Women's Clothing</option>
                     <option value="services">Services</option>
                 </select>
+
                 <div class="image-upload">
-                    <input class="in"  id = "bla" type='file' multiple onchange="readURL(this);" required>
+                    <input class="in"  id = "bla" type='file' name="fileToUpload" accept="image/*" required>
                    <br> <img class="in" id="blah" src="#" alt="your image" />
 
                     <div id="submitBorder">
