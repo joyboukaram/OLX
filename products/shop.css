@@ -1,0 +1,199 @@
+body {
+    background-color: rgba(234, 232, 232, 0.45);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin-bottom: 15px;
+    background-color: rgb(109, 44, 44);
+    padding: 7px;
+    color: rgb(245, 245, 245);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+#head {
+    float: right;
+
+}
+
+.icons {
+    width: 15px;
+    height: 15px;
+}
+
+
+#formsearch {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#form_button {
+    margin: 2% 47%;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 0.5% 2%;
+}
+#margin_date {
+    margin-bottom: 10%;
+}
+nav {
+    display: grid;
+    grid-template-columns: 10% 40% 25% 25%;
+    margin-top: -16px;
+    background-color: white;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    border-left: 1px solid rgb(240, 240, 240);
+    border-right: 1px solid rgb(240, 240, 240);
+}
+
+input#search {
+    margin-left: 5%;
+    width: 60%;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+#logo {
+    width: 100%;
+    padding: 3%;
+}
+
+div#nav {
+    float: right;
+    margin-left: 50%;
+    margin-top: 10%;
+}
+
+div#nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+div#nav a:hover {
+    color: navy;
+}
+
+#ad {
+    text-align: center;
+    padding: 1% 2%;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: rgb(109, 44, 44);
+    margin-left: 20%;
+    margin-top: 2.5%;
+    width: 50%;
+    height: 70%;
+}
+
+img {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+#box {
+    display: grid;
+    grid-template-columns: 15% 20% 65%;
+    margin-top: 3%;
+    border: 2px solid rgb(109, 44, 44);
+    background-color: white;
+}
+
+#search_by_category {
+    margin-top: 70%;
+    text-align: center;
+}
+
+#stuff {
+    padding: 5%;
+}
+
+.category {
+    cursor: pointer;
+    color: grey;
+    text-decoration: none;
+}
+
+.category:hover {
+    color: blue;
+}
+
+#latest {
+    margin: 2%;
+}
+
+#whats_new {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.cat_h2 {
+	position: relative;
+    font: 40px Helvetica, Sans-Serif;
+    text-align: center;
+	letter-spacing:-2px;
+	color: rgb(109, 44, 44);
+}
+
+#products {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 2%;
+}
+
+.items {
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid lightgray;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+#filter {
+    padding: 0.5% 2%;
+    margin-bottom: 2%;
+    margin-left: 47%;
+    text-align: center;
+    background-color: lightgray;
+    color: black;
+    font-size: 14px;
+}
+
+.sort_by_cat {
+    font-family: monospace;
+    font-size: 20px;
+    font-style: italic;
+    padding: 1%;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: rgb(2, 26, 40);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

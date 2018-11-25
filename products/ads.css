@@ -1,0 +1,107 @@
+body {
+    background-color: rgba(234, 232, 232, 0.45);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin-bottom: 15px;
+    background-color: rgb(109, 44, 44);
+    padding: 7px;
+    color: rgb(245, 245, 245);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+#head {
+    float: right;
+
+}
+
+.icons {
+    width: 15px;
+    height: 15px;
+}
+
+form {
+
+    margin-bottom: 0px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 10% 40% 25% 25%;
+    margin-top: -16px;
+    background-color: white;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    border-left: 1px solid rgb(240, 240, 240);
+    border-right: 1px solid rgb(240, 240, 240);
+}
+
+nav form input#search {
+    margin-left: 5%;
+    width: 60%;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+#logo {
+    width: 100%;
+    padding: 3%;
+}
+
+div#nav {
+    float: right;
+    margin-left: 50%;
+    margin-top: 10%;
+}
+
+div#nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+div#nav a:hover {
+    color: navy;
+}
+
+#ad {
+    text-align: center;
+    padding: 1% 2%;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: rgb(109, 44, 44);
+    margin-left: 20%;
+    margin-top: 2.5%;
+    width: 50%;
+    height: 70%;
+}
+
+h1 {
+    text-align: center;
+    color: darkslategrey;
+    border-bottom: 1px solid black;
+    padding-bottom: 1%;
+}
+
+div {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.images_ads {
+    margin-bottom: 7%;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+img{
+    cursor: pointer;
+}

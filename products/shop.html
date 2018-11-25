@@ -1,0 +1,444 @@
+<html>
+
+<head>
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <script src="shop.js" defer></script>
+</head>
+
+<body>
+    <header>
+        Made by Joy & Joseph
+        <span id="head">
+            <a href="../account/account.html">My Account</a>
+            /
+            <img class="icons" src="../images/shopping_cart.png" href="">
+            /
+            <img class="icons" src="../images/search.png" href="">
+        </span>
+
+    </header>
+
+    <nav>
+        <a href="home.html"><img id="logo" src="../images/olx.png" /></a>
+
+        <form method="GET" action="search/search.html">
+            <input id="search" type="text" placeholder="Search for your item...">
+            <input id="submit" type="submit" value="Search">
+        </form>
+
+        <button id="ad">+ Place an ad</button>
+
+        <div id="nav">
+            <a href="../home.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="../contact.html">Contact</a>
+        </div>
+
+    </nav>
+
+    <div id="box">
+
+        <h2 id="search_by_category">Search by Category</h2>
+
+        <div id="stuff">
+            <a class="category" id="jewelry_link">Accessories</a>
+            <br><br>
+            <a class="category" id="cars_link">Cars</a>
+            <br><br>
+            <a class="category" id="children_link">Children gadgets</a>
+            <br><br>
+
+            <a class="category" id="electronics_link">Electronics</a>
+            <br><br>
+            <a class="category" id="home_link">Home and Garden</a>
+            <br><br>
+            <a class="category" id="beauty_link">Makeup</a>
+            <br><br>
+            <a class="category" id="men_link">Men's Clothing</a>
+            <br><br>
+            <a class="category" id="sports_link">Sports and Outdoors</a>
+            <br><br>
+            <a class="category" id="women_link">Women's Clothing</a>
+            <br><br>
+            <a class="category" id="bags_link">Services</a>
+        </div>
+
+        <div id="latest">
+            <h3>WHAT'S NEW</h3>
+            <div id="whats_new">
+                <img class="new_image" src="../images/monkey.jpg" width="100%">
+                <img class="new_image" src="../images/monkey.jpg" width="100%">
+                <img class="new_image" src="../images/monkey.jpg" width="100%">
+                <img class="new_image" src="../images/monkey.jpg" width="100%">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <button id="filter">Filter</button>
+    <div id="sort_div" class="hidden">
+        <form>
+            <div id="formsearch">
+                <p class="sort_by_cat">Sort by Price</p>
+
+                <p class="sort_by_cat">Sort by Date</p>
+
+                <p class="sort_by_cat">Sort by Location</p>
+
+
+
+                <div id="open_price_filter">
+                    <input type="radio" name="price" value="low to high"> Low to high<br>
+                    <input type="radio" name="price" value="high to low"> High to low
+                </div>
+
+
+
+                <div id="open_date_filter">
+                    <input type="radio" name="date" value="Oldest to most recent">Oldest to
+                    most
+                    recent<br>
+                    <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest
+                </div>
+
+
+
+                <div id="open_location_filter">
+                    <input type="radio" name="location" value="Furthest to nearest">Furthest
+                    to
+                    nearest<br>
+                    <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+                </div>
+            </div>
+            <input id="form_button" type="submit" value="done">
+        </form>
+
+    </div>
+
+
+    <div id="women" class="hidden">
+        <h2 class="cat_h2">Women's Clothing</h2>
+
+
+
+        <div id="products">
+
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+
+        </div>
+    </div>
+
+    <div id="men" class="hidden">
+        <h2 class="cat_h2">Men's Clothing</h2>
+
+
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+            <img class="items new_image" src="../images/military.jpg">
+
+        </div>
+    </div>
+
+    <div id="electronics" class="hidden">
+        <h2 class="cat_h2">Electronics</h2>
+
+
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+            <img class="items new_image" src="../images/acc.jpg">
+
+        </div>
+    </div>
+
+    <div id="jewelry" class="hidden">
+        <h2 class="cat_h2">Accessories</h2>
+
+
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+            <img class="items new_image" src="../images/beanie.jpg">
+
+        </div>
+    </div>
+
+    <div id="home" class="hidden">
+        <h2 class="cat_h2">Home and Garden</h2>
+
+
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+            <img class="items new_image" src="../images/clothes.jpg">
+
+        </div>
+    </div>
+
+
+
+    <div id="children" class="hidden">
+        <h2 class="cat_h2">Children gadgets</h2>
+
+
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+            <img class="items new_image" src="../images/phones.jpg">
+
+        </div>
+    </div>
+
+    <div id="sports" class="hidden">
+        <h2 class="cat_h2">Sports and Outdoors</h2>
+
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+            <img class="items new_image" src="../images/jeans.jpg">
+        </div>
+    </div>
+
+    <div id="beauty" class="hidden">
+        <h2 class="cat_h2">Makeup</h2>
+
+        <div id="products">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+            <img class="items new_image" src="../images/purse.jpg">
+        </div>
+    </div>
+
+    <div id="cars" class="hidden">
+        <h2 class="cat_h2">Cars</h2>
+        <div id="products">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+            <img class="items new_image" src="../images/shoes.jpg">
+        </div>
+    </div>
+
+    <div id="bags" class="hidden">
+        <h2 class="cat_h2">Services</h2>
+        <div id="sort_div" class="hidden">
+            <button id="price_sort">Sort by Price</button>
+            <form id="open_price_filter" class="hidden">
+                <input type="radio" name="price" value="low to high"> Low to high<br>
+                <input type="radio" name="price" value="high to low"> High to low<br>
+            </form>
+            <button id="date_sort">Sort by Date</button>
+            <form id="open_date_filter" class="hidden">
+                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
+                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
+            </form>
+
+            <button id="location_sort">Sort by Location</button>
+            <form id="open_location_filter" class="hidden">
+                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
+                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
+            </form>
+        </div>
+
+        <div id="products">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+            <img class="items new_image" src="../images/dress.jpg">
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                © Copyright Joy and Joseph (2018) - All Rights Reserved
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>

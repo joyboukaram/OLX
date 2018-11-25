@@ -1,0 +1,74 @@
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+    margin-top: 4%;
+    font-size: 28px;
+    color: darkslategray;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+}
+
+#border {
+    margin-top: 3%;
+    border: 2px solid black;
+    width: 25%;
+
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+form {
+    text-align: center;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 15%;
+    font-size: 20px;
+    margin-left: -6px;
+    background: none;
+}
+
+p#noAccount {
+    margin-top: 5%;
+    text-align: center;
+    color: black;
+}
+
+#noAccount a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#submit{
+    background-color: lightgray;
+    border-radius: 15px;
+    padding: 1% 1%;
+    font-size: 16px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 20%;
+    border: 1px solid black;
+}
+
+#both {
+    display: flex;
+}
+
+#both img {
+
+    height: 60%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 55px;
+}
