@@ -1,6 +1,18 @@
 <?php
 require ("../connect.php");
 session_start();
+
+// if (isset($_POST['fileToUpload'])) {
+// 		$fileToUpload = $mysqli->real_escape_string($_POST['fileToUpload']);
+// }else{
+// 	die("Error3");
+// }
+//
+// $filesToUpload = explode (" " , $fileToUpload);
+//
+
+
+
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -78,9 +90,8 @@ $id= 1;
   $stmt->execute();
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $_SESSION["done"] = true;
-        echo "done";
+				header("Location:../home.php");
       }
-      echo "done1";
 
 
 ?>
