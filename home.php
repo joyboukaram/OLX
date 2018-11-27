@@ -92,15 +92,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
         <div id="products">
             <!-- 10 ITEMS -->
             <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
-            <img class="items open_image" src="images/beanie.jpg">
+
 
 
         </div>

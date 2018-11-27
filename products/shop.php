@@ -9,7 +9,7 @@
     <script src="shop.js" defer></script>
     <script src = "modal.js" defer></script>
     <script src = "product.js" defer></script>
-    
+
 </head>
 
 <body>
@@ -73,7 +73,7 @@
             <h3 class="h3shop">WHAT'S NEW</h3>
             <div id="whats_new">
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
-                
+
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-   
+
     <br>
     <br>
 
@@ -320,8 +320,8 @@
                 <li>blablabla</li><br>
                 <li>blablabla</li><br>
                 <li>blablabla</li><br>
-                
-                
+
+
                 <li>blablabla</li><br>
                 <li>blablabla</li>
             </ul>
@@ -330,7 +330,7 @@
                 <button id = "add_to_cart" class="add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
             </form>
 
-            
+
             <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button>
 
         </div>
@@ -348,7 +348,7 @@
         </div>
     </footer>
 
-    
+
 
 </body>
 

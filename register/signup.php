@@ -60,7 +60,7 @@ $stmt->bind_result($temp);
 $count = $stmt->num_rows;
 
 if($count != 0){
-	$_SESSION["credentials"] = false;
+	$_SESSION["logged_in"] = false;
 	header("Location:register.php");
 
 }else{
@@ -73,7 +73,8 @@ if($count != 0){
   $_SESSION["logged_in"] = true;
 	$_SESSION["firt_name"] = $first_name;
   $_SESSION["last_name"] = $last_name;
-$_SESSION["credentials"] = true;
+  $cart= "jrer";
+  $_SESSION["cart"] = $cart;
 header("Location:../home.php");
 
 }
