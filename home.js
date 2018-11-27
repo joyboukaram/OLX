@@ -25,14 +25,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-const image = document.querySelectorAll(".open_image");
-
-for (let i = 0; i < image.length; i++) {
-    image[i].addEventListener("click", event => {
-        window.open("products/product.php", "_self");
-    })
-}
-
 const ad = document.querySelector("#ad");
 
 ad.addEventListener("click", event => {

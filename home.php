@@ -10,7 +10,11 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="products/modal.css">
+    <link rel="stylesheet" href="products/product.css">
     <script src="home.js" defer></script>
+    <script src = "products/modal.js" defer></script>
+    <script src = "products/product.js" defer></script>
 </head>
 
 <body>
@@ -90,15 +94,49 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <div id="latest">
         <h2>Latest Products</h2>
         <div id="products">
-            <!-- 10 ITEMS -->
-            <img class="items open_image" src="images/beanie.jpg">
-
-
-
+            <img id="myBtn" class="items open_image" src="images/beanie.jpg">
         </div>
     </div>
 
+<div id="myModal" class="modal">
 
+<!-- Modal content -->
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <section id="modalbox">
+      <div id="images_grid">
+          <img class="product_image" id="image1" src="images/avatar.png">
+          <img class="product_image" id="image2" src="images/avatar.png">
+      </div>
+      <div id="details">
+      <h2 id = "item_added" class = "hidden">Item added!</h2>
+          <h3 class = "h3modal"><i>Name:</i> item</h3>
+          <h3 class = "h3modal"><i>Price:</i> $5.00</h3>
+          <h3 class = "h3modal"><i>Category</i> electronics</h3>
+          <h3 class = "h3modal"><i>Location:</i> place</h3>
+          <h3 class = "h3modal"><i>Description:</i></h3>
+          <ul>
+              <li>Year of production: </li><br>
+              <li>blablabla</li><br>
+              <li>blablabla</li><br>
+              <li>blablabla</li><br>
+              <li>blablabla</li><br>
+
+
+              <li>blablabla</li><br>
+              <li>blablabla</li>
+          </ul>
+          <h3 class = "h3modal"><i>Seller:</i> person</h3>
+          <form method="POST">
+              <button id = "add_to_cart" class="add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
+          </form>
+
+
+          <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button>
+
+      </div>
+  </section>
+</div>
 
 
 
