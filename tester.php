@@ -9,8 +9,19 @@ if (isset($_POST['result'])) {
 	die("Error");
 }
 
-$cart = $_SESSION["cart"];
-array_push($cart, $result);
-$_SESSION["cart"] =$cart;
+
+if(!is_array($_SESSION['cart']))
+  {
+    $_SESSION['cart'] = array();
+    array_push($_SESSION['cart'], $result);
+  }
+
+  else{
+array_push($_SESSION['cart'], $result);
+}
+
+
+
+
 
  ?>

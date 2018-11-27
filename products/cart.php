@@ -1,5 +1,10 @@
 <html>
+<?php
+session_start();
+echo $_SESSION['cart'][0];
+echo $_SESSION['cart'][1];
 
+ ?>
 <head>
     <title>My Cart</title>
     <link rel="stylesheet" href="cart.css">

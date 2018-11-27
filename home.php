@@ -15,6 +15,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <script src="home.js" defer></script>
     <script src = "products/modal.js" defer></script>
     <script src = "products/product.js" defer></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+
+
 </head>
 
 <body>
@@ -107,33 +110,25 @@ while($count < count($arr)){
 
 <!-- Modal content -->
 <div class="modal-content">
-  <span class="close">&times;</span>
+  <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
   <section id="modalbox">
       <div id="images_grid">
-          <img class="product_image" id="image1" src="images/avatar.png">
-          <img class="product_image" id="image2" src="images/avatar.png">
+          <img class="product_image" id="image1" src="products/<?=$arr[$count]['image']?>">
+          <img class="product_image" id="image2" src="products/<?=$arr[$count]['image']?>">
       </div>
       <div id="details">
       <h2 id = "item_added" class = "hidden">Item added!</h2>
-          <h3 class = "h3modal"><i><?=$arr[$count]['name']?></i> item</h3>
-          <h3 class = "h3modal"><i>Price:</i> $5.00</h3>
-          <h3 class = "h3modal"><i>Category</i> electronics</h3>
-          <h3 class = "h3modal"><i>Location:</i> place</h3>
+          <h3 class = "h3modal"><i>Name:</i> <?=$arr[$count]['name']?></h3>
+          <h3 class = "h3modal"><i>Price:</i><?=$arr[$count]['price']?></h3>
+          <h3 class = "h3modal"><i>Category</i> <?=$arr[$count]['categorie']?></h3>
+          <h3 class = "h3modal"><i>Location:</i> <?=$arr[$count]['location']?></h3>
           <h3 class = "h3modal"><i>Description:</i></h3>
           <ul>
-              <li>Year of production: </li><br>
-              <li>blablabla</li><br>
-              <li>blablabla</li><br>
-              <li>blablabla</li><br>
-              <li>blablabla</li><br>
-
-
-              <li>blablabla</li><br>
-              <li>blablabla</li>
+              <?=$arr[$count]['description']?>
           </ul>
-          <h3 class = "h3modal"><i>Seller:</i> person</h3>
-          <form method="POST">
-              <button id = "add_to_cart" class="add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
+          <h3 class = "h3modal"><i>Seller:</i> <?=$arr[$count]['seller']?></h3>
+          <form id="addCart">
+              <button value="<?=$arr[$count]['name']?>" id= "" class="hello add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
           </form>
 
 
