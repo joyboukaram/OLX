@@ -3,7 +3,13 @@
 <head>
     <title>Shop</title>
     <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="product.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="shop.js" defer></script>
+    <script src = "modal.js" defer></script>
+    <script src = "product.js" defer></script>
+    
 </head>
 
 <body>
@@ -38,7 +44,6 @@
     </nav>
 
     <div id="box">
-
         <h2 id="search_by_category">Search by Category</h2>
 
         <div id="stuff">
@@ -65,15 +70,18 @@
         </div>
 
         <div id="latest">
-            <h3>WHAT'S NEW</h3>
+            <h3 class="h3shop">WHAT'S NEW</h3>
             <div id="whats_new">
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
+                
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
                 <img class="new_image" src="../images/monkey.jpg" width="100%">
             </div>
         </div>
     </div>
+
+   
     <br>
     <br>
 
@@ -82,19 +90,13 @@
         <form>
             <div id="formsearch">
                 <p class="sort_by_cat">Sort by Price</p>
-
                 <p class="sort_by_cat">Sort by Date</p>
-
                 <p class="sort_by_cat">Sort by Location</p>
-
-
 
                 <div id="open_price_filter">
                     <input type="radio" name="price" value="low to high"> Low to high<br>
                     <input type="radio" name="price" value="high to low"> High to low
                 </div>
-
-
 
                 <div id="open_date_filter">
                     <input type="radio" name="date" value="Oldest to most recent">Oldest to
@@ -102,8 +104,6 @@
                     recent<br>
                     <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest
                 </div>
-
-
 
                 <div id="open_location_filter">
                     <input type="radio" name="location" value="Furthest to nearest">Furthest
@@ -141,26 +141,6 @@
     <div id="men" class="hidden">
         <h2 class="cat_h2">Men's Clothing</h2>
 
-
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
-
         <div id="products">
 
             <img class="items new_image" src="../images/military.jpg">
@@ -178,26 +158,6 @@
 
     <div id="electronics" class="hidden">
         <h2 class="cat_h2">Electronics</h2>
-
-
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
 
         <div id="products">
 
@@ -217,26 +177,6 @@
     <div id="jewelry" class="hidden">
         <h2 class="cat_h2">Accessories</h2>
 
-
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
-
         <div id="products">
 
             <img class="items new_image" src="../images/beanie.jpg">
@@ -254,26 +194,6 @@
 
     <div id="home" class="hidden">
         <h2 class="cat_h2">Home and Garden</h2>
-
-
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
 
         <div id="products">
 
@@ -296,24 +216,6 @@
         <h2 class="cat_h2">Children gadgets</h2>
 
 
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
 
         <div id="products">
             <img class="items new_image" src="../images/phones.jpg">
@@ -331,25 +233,6 @@
 
     <div id="sports" class="hidden">
         <h2 class="cat_h2">Sports and Outdoors</h2>
-
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
 
         <div id="products">
             <img class="items new_image" src="../images/jeans.jpg">
@@ -397,27 +280,9 @@
 
     <div id="bags" class="hidden">
         <h2 class="cat_h2">Services</h2>
-        <div id="sort_div" class="hidden">
-            <button id="price_sort">Sort by Price</button>
-            <form id="open_price_filter" class="hidden">
-                <input type="radio" name="price" value="low to high"> Low to high<br>
-                <input type="radio" name="price" value="high to low"> High to low<br>
-            </form>
-            <button id="date_sort">Sort by Date</button>
-            <form id="open_date_filter" class="hidden">
-                <input type="radio" name="date" value="Oldest to most recent">Oldest to most recent<br>
-                <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest<br>
-            </form>
-
-            <button id="location_sort">Sort by Location</button>
-            <form id="open_location_filter" class="hidden">
-                <input type="radio" name="location" value="Furthest to nearest">Furthest to nearest<br>
-                <input type="radio" name="location" value="Nearest to furthest">Nearest to furthest<br>
-            </form>
-        </div>
 
         <div id="products">
-            <img class="items new_image" src="../images/dress.jpg">
+            <img id="myBtn" class="items new_image" src="../images/dress.jpg">
             <img class="items new_image" src="../images/dress.jpg">
             <img class="items new_image" src="../images/dress.jpg">
             <img class="items new_image" src="../images/dress.jpg">
@@ -429,7 +294,50 @@
         </div>
     </div>
 
+    <!-- <button id="myBtn">Open Modal</button> -->
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <section id="modalbox">
+        <div id="images_grid">
+            <img class="product_image" id="image1" src="../images/avatar.png">
+            <img class="product_image" id="image2" src="../images/avatar.png">
+        </div>
+        <div id="details">
+        <h2 id = "item_added" class = "hidden">Item added!</h2>
+            <h3 class = "h3modal"><i>Name:</i> item</h3>
+            <h3 class = "h3modal"><i>Price:</i> $5.00</h3>
+            <h3 class = "h3modal"><i>Category</i> electronics</h3>
+            <h3 class = "h3modal"><i>Location:</i> place</h3>
+            <h3 class = "h3modal"><i>Description:</i></h3>
+            <ul>
+                <li>Year of production: </li><br>
+                <li>blablabla</li><br>
+                <li>blablabla</li><br>
+                <li>blablabla</li><br>
+                <li>blablabla</li><br>
+                
+                
+                <li>blablabla</li><br>
+                <li>blablabla</li>
+            </ul>
+            <h3 class = "h3modal"><i>Seller:</i> person</h3>
+            <form method="POST">
+                <button id = "add_to_cart" class="add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
+            </form>
+
+            
+            <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button>
+
+        </div>
+    </section>
+  </div>
+
+</div>
 
     <footer>
         <div class="container">
@@ -439,6 +347,9 @@
         </div>
         </div>
     </footer>
+
+    
+
 </body>
 
 </html>

@@ -1,13 +1,5 @@
 const arr = [women, men, electronics, jewelry, home, bags, children, sports, beauty, cars];
 
-const image = document.querySelectorAll(".new_image");
-
-for (let i = 0; i < image.length; i++) {
-    image[i].addEventListener("click", event => {
-        window.open("../products/product.php", "_self");
-    })
-}
-
 
 arr[women] = document.querySelector('#women');
 arr[men] = document.querySelector("#men");
@@ -130,4 +122,20 @@ const searchpic = document.querySelector("#searchpic");
 const search = document.querySelector("#search");
 searchpic.addEventListener("click", event => {
   search.style.border = "4px solid rgb(109, 44, 44)";
+})
+
+
+const add_to_cart = document.querySelector("#add_to_cart");
+const go_to_cart = document.querySelector("#go_to_cart");
+const item_added = document.querySelector("#item_added");
+
+add_to_cart.addEventListener("click", event => {
+  event.preventDefault();
+  add_to_cart.classList.add("hidden");
+  go_to_cart.classList.remove("hidden");
+  item_added.classList.remove("hidden");
+})
+
+go_to_cart.addEventListener("click", event => {
+  window.open("cart.php", "_self");
 })

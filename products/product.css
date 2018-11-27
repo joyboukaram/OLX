@@ -112,18 +112,18 @@ div#nav a:hover {
 }
 
 
-#box{
-   margin: 2% 5%;
+#modalbox{
+   
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 35% 65%;
     border: 1px solid black;
-    width: 90%;
+    /* width: 90%; */
     
 }
 
 .product_image{
     padding: 0% 7%;
-    width: 85%;
+    width: 60%;
     border-right: 1px solid black;
 }
 
@@ -138,7 +138,7 @@ div#nav a:hover {
 }
 
 #details{
-    margin-left: 5%;
+    margin-left: -10%;
 }
 
 #remove_from_cart{
@@ -150,6 +150,7 @@ div#nav a:hover {
     background-color: lightgreen;
     border-radius: 15px;
     padding: 1% 0%;
+    margin-top: 5%;
     font-size: 16px;
     float: right;
     margin-right: 2%;
@@ -173,6 +174,7 @@ footer {
     left: 0;
 }
 
-h3{
+.h3modal{
+    
     font-weight: bold;
 }
