@@ -91,14 +91,19 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     </div>
 
 
+
     <div id="latest">
         <h2>Latest Products</h2>
         <div id="products">
-            <img id="myBtn" class="items open_image" src="images/beanie.jpg">
-        </div>
-    </div>
+					<?php
+include 'products/getads.php';
+$count=0 ;
+while($count < count($arr)){
 
-<div id="myModal" class="modal">
+?>
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="products/<?=$arr[$count]['image']?>">
+
+<div id="<?=$arr[$count]['name']?>" class="modal">
 
 <!-- Modal content -->
 <div class="modal-content">
@@ -110,7 +115,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
       </div>
       <div id="details">
       <h2 id = "item_added" class = "hidden">Item added!</h2>
-          <h3 class = "h3modal"><i>Name:</i> item</h3>
+          <h3 class = "h3modal"><i><?=$arr[$count]['name']?></i> item</h3>
           <h3 class = "h3modal"><i>Price:</i> $5.00</h3>
           <h3 class = "h3modal"><i>Category</i> electronics</h3>
           <h3 class = "h3modal"><i>Location:</i> place</h3>
@@ -137,10 +142,15 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
       </div>
   </section>
 </div>
+</div>
 
+<?php
+		$count++;
+					}
+?>
 
-
-
+</div>
+</div>
 
     <footer>
         <div class="container">
