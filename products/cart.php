@@ -1,13 +1,16 @@
 <html>
 <?php
 session_start();
-echo $_SESSION['cart'][0];
-echo $_SESSION['cart'][1];
+$price = 0;
+
+
+
 
  ?>
 <head>
     <title>My Cart</title>
     <link rel="stylesheet" href="cart.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
     <script src="cart.js" defer></script>
 
 </head>
@@ -46,26 +49,35 @@ echo $_SESSION['cart'][1];
 
     <h1>Cart</h1>
 
+<?php
+    include 'getcart.php' ;
+    $count=0 ;
+    while($count < count($arr)){
+
+    ?>
     <div id="box">
 
-        <img class="prod_image" src="../images/beanie.jpg">
+        <img class="prod_image" src="<?=$arr[$count]["image"]?>">
         <div class="div_margin">
             <div id="new_div">
-                <p><b>Name</b></p>
-                <p><b>Description</b></p>
-                <p><b>Price</b></p>
+                <p><b><?=$arr[$count]["name"]?></b></p>
+                <p><b><?=$arr[$count]["description"]?></b></p>
+                <p><b><?=$arr[$count]["price"]?></b></p>
             </div>
             <div id="checkbox">
-                <form method="GET">
-                    <input id="check" type="checkbox" name="buy">
+                <form method="GET" name="Cart">
+                    <input class="checkbox" id="check" value="<?=$arr[$count]["price"]?>" type="radio" name="buy">
                 </form>
             </div>
         </div>
     </div>
-
+<?php
+$count++ ;
+}
+ ?>
         <div id = "total">
             <p><b>Total</b></p>
-            <p id = "price">100</p>
+            <p id = "price">0></p>
         </div>
 
 </body>

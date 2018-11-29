@@ -1,10 +1,10 @@
-<?php 
+<?php
 session_start();
 ob_start();
 
-foreach($_SESSION as $key => $val) 
+foreach($_SESSION as $key => $val)
 {
 	unset($_SESSION[$key]);
 }
-header("Location:adminFirst.php");
+header("Location:index.php");
 ?>

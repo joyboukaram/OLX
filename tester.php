@@ -10,17 +10,25 @@ if (isset($_POST['result'])) {
 }
 
 
-if(!is_array($_SESSION['cart']))
-  {
-    $_SESSION['cart'] = array();
-    array_push($_SESSION['cart'], $result);
-  }
+// if(!is_array($_SESSION['cart']))
+//   {
+//     $_SESSION['cart'] = array();
+//     array_push($_SESSION['cart'], $result);
+//   }
+//
+//   else{
+// array_push($_SESSION['cart'], $result);
+// }
+$_SESSION['cart'].= " ". $result ;
+$cartToUpload = $_SESSION['cart'];
+$email = $_SESSION["email"];
 
-  else{
-array_push($_SESSION['cart'], $result);
-}
+// $email="joseph@gmail.com" ;
+// $cartToUpload = "tett" ;
 
-
+$stmt = $mysqli->prepare("Update users set cart = ? where email = ?");
+$stmt->bind_param("ss",$cartToUpload , $email);
+$stmt->execute();
 
 
 

@@ -73,8 +73,8 @@ if($count != 0){
   $_SESSION["logged_in"] = true;
 	$_SESSION["firt_name"] = $first_name;
   $_SESSION["last_name"] = $last_name;
-  $cart= "jrer";
-  $_SESSION["cart"] = $cart;
+
+  $_SESSION["email"] = $email;
 header("Location:../home.php");
 
 }
