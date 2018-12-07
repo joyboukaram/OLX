@@ -1,20 +1,20 @@
 const image = document.querySelectorAll(".prod_image");
 for (let i = 0; i < image.length; i++) {
-    image[i].addEventListener("click", event => {
-        window.open("buy_product.php", "_self");
-    })
+	image[i].addEventListener("click", event => {
+		window.open("buy_product.php", "_self");
+	})
 }
 
 const searchpic = document.querySelector("#searchpic");
 const search = document.querySelector("#search");
 searchpic.addEventListener("click", event => {
-  search.style.border = "4px solid rgb(109, 44, 44)";
-  return;
+	search.style.border = "4px solid rgb(109, 44, 44)";
+	return;
 })
 
 const ad = document.querySelector("#ad");
 ad.addEventListener("click", event => {
-  window.open("../products/ad.php", "_self");
+	window.open("../products/ad.php", "_self");
 });
 
 
@@ -22,19 +22,26 @@ ad.addEventListener("click", event => {
 //     var prev = null;
 //     for(var i = 0; i < rad.length; i++) {
 var rad = document.querySelectorAll('.checkbox');
-for(var i = 0; i < rad.length; i++) {
-			rad[i].onclick = function() {
-			 $.ajax({
-				type: 'POST',
-					url: 'updateprice.php',
-					data: {
-							result: this.value,
-					},
+for (var i = 0; i < rad.length; i++) {
+	rad[i].addEventListener("click", showTotal);
+	
+}
 
-					success : function(data){
-            console.log(data);
-					}
-			 });
+var total_price = document.querySelector("#price");
 
-			};
+function showTotal(event) {
+	const current_event = event.currentTarget;
+	$.ajax({
+			type: 'POST',
+			url: 'updateprice.php',
+			data: {
+				result: current_event.value,
+			},
+
+			success: function (data) {
+				total_price.textContent = data*1000 + " LBP";
+			}
+
+		})
+		current_event.disabled = true;
 	}

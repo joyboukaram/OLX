@@ -80,7 +80,7 @@ $count++ ;
  ?>
         <div id = "total">
             <p><b>Total</b></p>
-            <p id = "price">0></p>
+            <p id = "price"></p>
         </div>
 
 </body>
