@@ -9,15 +9,7 @@
 
 <body>
     <h1>Your Profile Information</h1>
-
-    <div id="box">
-
-        <div id="profile_pic">
-
-            <img id="avatar" src="../images/avatar.png">
-
-        </div>
-<?php
+    <?php
 
 include "getprofile.php" ;
 
@@ -26,15 +18,23 @@ while($count < count($arr)){
 
 ?>
 
+    <div id="box">
+
+        <div id="profile_pic">
+
+            <img id="avatar" src="../images/avatar.png">
+
+        </div>
+
+
         <div id="box2">
             <div id="user">
-                <p><b>Name:</b><?=$arr[$count]["firstName"] ." ". $arr[$count]["lastName"] ?>  </p>
-                <p><b>Age:</b></p>
-                <p><b>Date of Birth:</b><?=$arr[$count]["birthdate"] ?> </p>
-                <p><b>Email:</b><?=$arr[$count]["email"] ?> </p>
+                <p><b>Name: </b><span class = "capital"><?=$arr[$count]["firstName"] ." ". $arr[$count]["lastName"] ?> </span></p>
+                <p><b>Date of Birth: </b><?=$arr[$count]["birthdate"] ?> </p>
+                <p><b>Email: </b><?=$arr[$count]["email"] ?> </p>
                 <!-- <p><b>Password</b></p> -->
-                <p><b>Billing Information:</b></p>
-                <p><b>Shipping Address:</b></p>
+                <p><b>Billing Information:</b><span class = "capital"></span></p>
+                <p><b>Shipping Address: </b><span class = "capital"><?=$arr[$count]["address"] ?></span></p>
 
                 <a href="../products/my_ads.php">My ads</a>
                 <br><br>

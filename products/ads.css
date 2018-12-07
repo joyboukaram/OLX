@@ -53,16 +53,11 @@ nav form input#search {
     padding: 3%;
 }
 
-div#nav {
-    float: right;
-    margin-left: 50%;
-    margin-top: 10%;
-}
+div#nav{
 
-div#nav a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 30%;
 }
 
 div#nav a:hover {
@@ -90,11 +85,7 @@ h1 {
     padding-bottom: 1%;
 }
 
-div {
-    margin-left: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
+
 
 .images_ads {
     margin-bottom: 7%;
@@ -104,4 +95,30 @@ div {
 
 img{
     cursor: pointer;
+}
+
+#products{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 2%;
+}
+
+.myads{
+    width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+
+
+#images_grid {
+    display: flex;
+    flex-flow: column;
+}
+
+#submit_logout{
+    margin-top: -5%;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
 }

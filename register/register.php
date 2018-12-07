@@ -13,15 +13,15 @@
 
 
     <form method="POST" action="signup.php">
-        <input class="input" type="text" placeholder="first name" name="first_name" required>
-        <input class="input" type="text" placeholder="last name" name="last_name" required>
+        <input class="input capital" type="text" placeholder="first name" name="first_name" required>
+        <input class="input capital" type="text" placeholder="last name" name="last_name" required>
         <input class="input" type="email" placeholder="email" name="email" required>
         <input class="input" type="password" placeholder="password" name="password" required>
         <select class="input" name="gender" required>
             <option class="gender" value="0">Male</option>
             <option class="gender" value="1">Female</option>
         </select>
-        <input class="input" type="text" placeholder="Address" name="address" required>
+        <input class="input capital" type="text" placeholder="Address" name="address" required>
         <input id="dob" class="input" type="date" name="birthdate" required>
         <div id="submitBorder">
             <input id="submit" type="submit" value="Sign up">

@@ -26,7 +26,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
         <div id="border">
             <form method="POST" action="upload.php" novalidate="novalidate" enctype="multipart/form-data">
                 <input class="input" type="text" name="name" placeholder="item name" required>
-                <input class="input" type="number" name="price" value="1" min="0" step="0.01" class="currecy" required>
+                <input class="input" type="number" name="price" value="1000" min="1000" step="0.25" class="currecy" required>
                 <input class="input" type="text" name="description" placeholder="description" required>
                 <input class="input" type="text" name="location" placeholder="location" required>
                 <select class="input" name="category" required>

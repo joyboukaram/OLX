@@ -3,9 +3,9 @@
 <head>
     <title>My ads</title>
     <link rel="stylesheet" href="ads.css">
-    <script src="ads.js" defer></script>
     <link rel="stylesheet" href="modal.css">
-
+    <link rel="stylesheet" href="product.css">
+    <script src="ads.js" defer></script>
     <script src = "modal.js" defer></script>
 
 </head>
@@ -38,6 +38,9 @@
             <a href="../home.php">Home</a>
             <a href="shop.php">Shop</a>
             <a href="../contact.php" id="contact">Contact</a>
+            <form method = "GET" action = "../Signout.php">
+                <input id = "submit_logout" type = "submit" value="Logout">
+            </form>
         </div>
 
     </nav>
@@ -49,9 +52,8 @@
 include 'getmyads.php';
 $count=0 ;
 while($count < count($arr)){
-
 ?>
-        <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$arr[$count]['image']?>">
+        <img class="myads" onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$arr[$count]['image']?>">
 
 <div id="<?=$arr[$count]['name']?>" class="modal">
 
@@ -64,7 +66,7 @@ while($count < count($arr)){
       <img class="product_image" id="image2" src="<?=$arr[$count]['image']?>">
   </div>
   <div id="details">
-  <h2 id = "item_added" class = "hidden">Item added!</h2>
+  
       <h3 class = "h3modal"><i>Name:</i> <?=$arr[$count]['name']?></h3>
       <h3 class = "h3modal"><i>Price:</i><?=$arr[$count]['price']?></h3>
       <h3 class = "h3modal"><i>Category</i> <?=$arr[$count]['categorie']?></h3>

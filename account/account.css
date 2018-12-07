@@ -41,3 +41,7 @@ h1 {
     margin-right: 1%;
 
 }
+
+.capital{
+    text-transform: capitalize;
+}

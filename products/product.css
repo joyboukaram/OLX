@@ -83,12 +83,12 @@ img{
 
 div#nav {
     float: right;
-    margin-left: 50%;
+    
     margin-top: 10%;
 }
 
 div#nav a {
-    margin-left: 15px;
+    
     text-decoration: none;
     color: black;
 }

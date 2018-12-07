@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="product.css">
+    <meta charset="utf-8">
+  
+  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="shop.js" defer></script>
     <script src = "modal.js" defer></script>

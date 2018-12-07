@@ -26,7 +26,6 @@ for (var i = 0; i < rad.length; i++) {
 	rad[i].addEventListener("click", showTotal);
 	
 }
-
 var total_price = document.querySelector("#price");
 
 function showTotal(event) {
@@ -35,11 +34,11 @@ function showTotal(event) {
 			type: 'POST',
 			url: 'updateprice.php',
 			data: {
-				result: current_event.value,
+				result: this.value,
 			},
 
 			success: function (data) {
-				total_price.textContent = data*1000 + " LBP";
+				total_price.textContent = data + " LBP";
 			}
 
 		})
