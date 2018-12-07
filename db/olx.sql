@@ -20,8 +20,8 @@ USE `olx` ;
 -- -----------------------------------------------------
 -- Table `olx`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `olx`.`user` (
-  `iduser` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `olx`.`users` (
+  `idusers` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NULL,
   `lastName` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,

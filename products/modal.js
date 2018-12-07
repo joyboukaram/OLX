@@ -40,7 +40,7 @@ var b = document.querySelectorAll(".hello");
 			b[i].onclick = function() {
 			 $.ajax({
 				type: 'POST',
-					url: '../tester.php',
+					url: 'tester.php',
 					data: {
 							result: this.value,
 					},

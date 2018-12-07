@@ -84,9 +84,9 @@ echo "here";
   	die("Error");
   }
 
-$id= 1;
-  $stmt = $mysqli->prepare("Insert INTO ads(name,price,description,location,categorie,image,users_idusers) VALUES(?,?,?,?,?,?,?) ");
-  $stmt->bind_param("ssssssi",$name,$price,$description,$location,$category,$target_file,$id);
+$email= $_SESSION["email"];
+  $stmt = $mysqli->prepare("Insert INTO ads(name,price,description,location,categorie,image,seller) VALUES(?,?,?,?,?,?,?) ");
+  $stmt->bind_param("sssssss",$name,$price,$description,$location,$category,$target_file,$email);
   $stmt->execute();
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $_SESSION["done"] = true;
