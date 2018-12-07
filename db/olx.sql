@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `olx`.`users` (
   `firstName` VARCHAR(45) NULL,
   `lastName` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
+  `password` VARCHAR(255) NULL,
   `gender` TINYINT NULL,
   `address` VARCHAR(45) NULL,
   `birthdate` VARCHAR(45) NULL,
@@ -56,7 +56,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `olx`.`adminuser` (
   `idadminuser` INT NOT NULL,
   `username` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
+  `password` VARCHAR(255) NULL,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`idadminuser`))
 ENGINE = InnoDB;

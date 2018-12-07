@@ -38,7 +38,7 @@ if($count == 0){
   $_SESSION["price"]= 0;
 
 
-	//header("Location:../home.php");
+	header("Location:../home.php");
 
 }
 ?>
