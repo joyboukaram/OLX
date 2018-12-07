@@ -31,7 +31,7 @@ form {
 }
 
 .hidden{
-    display: none; 
+    display: none;
 }
 
 
@@ -75,7 +75,7 @@ div#nav {
 }
 
 div#nav a {
-    
+
     text-decoration: none;
     color: black;
 }
@@ -250,7 +250,7 @@ h2:after{
 	position: absolute; left: 10px; top: 5px;
     color: rgba(63, 61, 61, 0.25);
 
-    
+
 }
 
 

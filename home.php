@@ -45,7 +45,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
             <a href="">Home</a>
             <a href="products/shop.php">Shop</a>
             <a href="contact.php" id="contact">Contact</a>
-            <form method = "GET" action = "../Signout.php">
+            <form method = "GET" action = "Signout.php">
                 <input id = "submit_logout" type = "submit" value="Logout">
             </form>
         </div>
@@ -129,6 +129,8 @@ while($count < count($arr)){
           </ul>
           <h3 class = "h3modal"><i>Seller:</i> <?=$arr[$count]['seller']?></h3>
           <!-- <form id="addCart"> -->
+
+
               <button value="<?=$arr[$count]['name']?>" id= "addtocart" class="hello add_to_cart"><img width="8%" src="images/cart.png"> Add to Cart</button>
           <!-- </form> -->
 

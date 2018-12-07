@@ -4,6 +4,10 @@
     <title>My ads</title>
     <link rel="stylesheet" href="ads.css">
     <script src="ads.js" defer></script>
+    <link rel="stylesheet" href="modal.css">
+
+    <script src = "modal.js" defer></script>
+
 </head>
 
 <body>
@@ -40,18 +44,55 @@
 
     <h1>My ads</h1>
 
-    <div>
-        <img class="images_ads" src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
-        <img class="images_ads"src="../images/beanie.jpg">
+    <div id="products">
+      <?php
+include 'getmyads.php';
+$count=0 ;
+while($count < count($arr)){
 
-    </div>
+?>
+        <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$arr[$count]['image']?>">
+
+<div id="<?=$arr[$count]['name']?>" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+<span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+<section id="modalbox">
+  <div id="images_grid">
+      <img class="product_image" id="image1" src="<?=$arr[$count]['image']?>">
+      <img class="product_image" id="image2" src="<?=$arr[$count]['image']?>">
+  </div>
+  <div id="details">
+  <h2 id = "item_added" class = "hidden">Item added!</h2>
+      <h3 class = "h3modal"><i>Name:</i> <?=$arr[$count]['name']?></h3>
+      <h3 class = "h3modal"><i>Price:</i><?=$arr[$count]['price']?></h3>
+      <h3 class = "h3modal"><i>Category</i> <?=$arr[$count]['categorie']?></h3>
+      <h3 class = "h3modal"><i>Location:</i> <?=$arr[$count]['location']?></h3>
+      <h3 class = "h3modal"><i>Description:</i></h3>
+      <ul>
+          <?=$arr[$count]['description']?>
+      </ul>
+      <h3 class = "h3modal"><i>Seller:</i> <?=$arr[$count]['seller']?></h3>
+      <!-- <form id="addCart"> -->
+
+
+      <!-- </form> -->
+
+
+      <!-- <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="images/cart.png"> Go to Cart</button> -->
+
+  </div>
+</section>
+</div>
+</div>
+
+<?php
+$count++;
+      }
+?>
+
+</div>
 
 
 </body>
