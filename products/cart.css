@@ -59,7 +59,9 @@ nav form input#search {
 
 div#nav {
     float: right;
-    margin-left: 50%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 30%;
     margin-top: 10%;
 }
 
@@ -99,7 +101,7 @@ div#nav {
 }
 
 div#nav a {
-    margin-left: 15px;
+    
     text-decoration: none;
     color: black;
 }
@@ -162,4 +164,11 @@ h1:after {
 
 .div_margin{
     margin: 2%;
+}
+
+#submit_logout{
+    margin-top: -5%;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
 }

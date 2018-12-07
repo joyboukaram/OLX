@@ -63,7 +63,7 @@
             </form>
 
             
-            <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button>
+            <!-- <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button> -->
 
         </div>
     </section>

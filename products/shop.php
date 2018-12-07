@@ -26,7 +26,7 @@
     </header>
 
     <nav>
-        <a href="home.php"><img id="logo" src="../images/olx.png" /></a>
+        <a href="../home.php"><img id="logo" src="../images/olx.png" /></a>
 
         <form method="GET" action="search/search.php">
             <input id="search" type="text" placeholder="Search for your item...">
@@ -39,6 +39,9 @@
             <a href="../home.php">Home</a>
             <a href="shop.php">Shop</a>
             <a href="../contact.php">Contact</a>
+            <form method = "GET" action = "Signout.php">
+                <button>Logout</button>
+            </form>
         </div>
 
     </nav>

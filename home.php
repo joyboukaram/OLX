@@ -12,12 +12,10 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="products/modal.css">
     <link rel="stylesheet" href="products/product.css">
+
     <script src="home.js" defer></script>
     <script src = "products/modal.js" defer></script>
-    <script src = "products/product.js" defer></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
-
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
 </head>
 
 <body>
@@ -47,6 +45,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
             <a href="">Home</a>
             <a href="products/shop.php">Shop</a>
             <a href="contact.php" id="contact">Contact</a>
+            <form method = "GET" action = "../Signout.php">
+                <input id = "submit_logout" type = "submit" value="Logout">
+            </form>
         </div>
 
     </nav>
@@ -127,12 +128,12 @@ while($count < count($arr)){
               <?=$arr[$count]['description']?>
           </ul>
           <h3 class = "h3modal"><i>Seller:</i> <?=$arr[$count]['seller']?></h3>
-          <form id="addCart">
-              <button value="<?=$arr[$count]['name']?>" id= "" class="hello add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
-          </form>
+          <!-- <form id="addCart"> -->
+              <button value="<?=$arr[$count]['name']?>" id= "addtocart" class="hello add_to_cart"><img width="8%" src="images/cart.png"> Add to Cart</button>
+          <!-- </form> -->
 
 
-          <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button>
+          <!-- <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="images/cart.png"> Go to Cart</button> -->
 
       </div>
   </section>

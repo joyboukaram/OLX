@@ -10,15 +10,4 @@ if (isset($_POST['result'])) {
 
   $_SESSION["price"] +=$result ;
   echo $_SESSION["price"] ;
-
-
-
-
-
-
-
-
-
-
-
- ?>
+?>

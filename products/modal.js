@@ -25,13 +25,22 @@
 
 
 //var rad = document.addCart.hello;
-var b = document.getElementsByClassName("hello");
+
+var add_to_cart = document.querySelector("#addtocart");
+
+// for(var i = 0; i < add_to_cart.length; i++){
+	add_to_cart.addEventListener("click", function(){
+		add_to_cart.classList.add("hidden");
+	})
+// }
+
+var b = document.querySelectorAll(".hello");
 	var prev = null;
-	for(var i = 0; i < 2; i++) {
+	for(var i = 0; i < b.length; i++) {
 			b[i].onclick = function() {
 			 $.ajax({
 				type: 'POST',
-					url: 'tester.php',
+					url: '../tester.php',
 					data: {
 							result: this.value,
 					},

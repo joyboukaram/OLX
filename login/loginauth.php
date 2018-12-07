@@ -28,7 +28,7 @@ $stmt->fetch();
 
 if($count == 0){
 	$_SESSION["logged_in"] = false;
-	header("Location:index.php");
+	header("Location:../index.php");
 }else {
 
   $_SESSION["logged_in"] = true;
