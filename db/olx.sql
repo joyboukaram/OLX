@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `olx`.`users` (
   `address` VARCHAR(45) NULL,
   `birthdate` VARCHAR(45) NULL,
   `cart` VARCHAR(45) NULL,
-  PRIMARY KEY (`iduser`))
+  PRIMARY KEY (`idusers`))
 ENGINE = InnoDB;
 
 

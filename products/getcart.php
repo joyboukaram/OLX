@@ -15,7 +15,6 @@ $items =explode(" ",$cart);
 $arr = [];
 
 foreach($items as $item){
-
   $stmt = $mysqli->prepare("SELECT * FROM ads where name = ?");
   $stmt->bind_param("s",$item);
   $stmt->execute();
