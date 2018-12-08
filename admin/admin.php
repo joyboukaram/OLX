@@ -1,12 +1,4 @@
 <html>
-        <?php
-        session_start();
-        if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
-        {
-            header("Location:index.php");
-        }
-        
-        ?>
 
 <head>
     <title>Admin Page</title>
@@ -25,7 +17,7 @@
 
             <a id="third" href="">Ads</a>
             <form method="POST" action="../Signout.php">
-                <a id="logout" href="login.html">Log out</a>
+                <input type="submit" id="logout">Log out</a>
             </form>
         </div>
         <div id="bottom">
