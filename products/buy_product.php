@@ -11,9 +11,9 @@
         <span id="head">
             <a href="../account/account.php">My Account</a>
             /
-            <img class="icons" src="../images/shopping_cart.png" id = "cart">
+            <img class="icons" src="../images/shopping_cart.png" id="cart">
             /
-            <img class="icons" src="../images/search.png" id = "searchpic">
+            <img class="icons" src="../images/search.png" id="searchpic">
         </span>
 
     </header>
@@ -63,7 +63,7 @@
 
             </form>
             <form method="GET">
-                <button class="add_to_cart" id = "remove_from_cart"><b>X</b> Remove from cart</button>
+                <button class="add_to_cart" id="remove_from_cart"><b>X</b> Remove from cart</button>
             </form>
         </div>
     </section>

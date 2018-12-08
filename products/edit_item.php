@@ -35,8 +35,8 @@
                     <option value="services">Services</option>
                 </select>
                 <div class="image-upload">
-                    <input class="in"  id = "bla" type='file' multiple onchange="readURL(this);">
-                   <br> <img class="in" id="blah" src="#" alt="your image" />
+                    <input class="in" id="bla" type='file' multiple onchange="readURL(this);">
+                    <br> <img class="in" id="blah" src="#" alt="your image" />
 
                     <div id="submitBorder">
                         <input id="submit" type="submit" value="Submit">

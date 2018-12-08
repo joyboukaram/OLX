@@ -30,7 +30,7 @@ form {
     margin-bottom: 0px;
 }
 
-img{
+img {
     cursor: pointer;
 }
 
@@ -65,43 +65,44 @@ div#nav {
     margin-top: 10%;
 }
 
-.div_margin{
+.div_margin {
     display: grid;
     grid-template-columns: 90% 10%;
 }
 
 
-#total{
+#total {
     margin-top: 0.5%;
     width: 80%;
     margin-left: 10%;
     display: grid;
     grid-template-columns: 80% 20%;
-    
+
     border-top: 1px solid rgb(109, 44, 44);
 }
 
-#new_div p{
+#new_div p {
     margin: 3%;
 }
 
-#total p{
+#total p {
     font-size: larger;
     margin-left: 5%;
 }
 
-#price{
+#price {
     padding-left: 50%;
 }
 
 
-#check{
-    width: 40px; height: 40px;
+#check {
+    width: 40px;
+    height: 40px;
     margin-top: 50%;
 }
 
 div#nav a {
-    
+
     text-decoration: none;
     color: black;
 }
@@ -110,7 +111,7 @@ div#nav a:hover {
     color: navy;
 }
 
-#ad{
+#ad {
     text-align: center;
     padding: 1% 2%;
     font-size: 20px;
@@ -124,25 +125,27 @@ div#nav a:hover {
     height: 70%;
 }
 
-h1{
+h1 {
     margin-left: 45%;
 
     display: inline;
-	position: relative;
+    position: relative;
     font: 80px Helvetica, Sans-Serif;
     text-align: center;
-	letter-spacing: -5px;
-	color: rgb(109, 44, 44);
+    letter-spacing: -5px;
+    color: rgb(109, 44, 44);
 
 }
 
 h1:after {
-	content: "Cart";
-	position: absolute; left: 10px; top: 5px;
-	color: rgb(109, 44, 44, 0.5);
+    content: "Cart";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: rgb(109, 44, 44, 0.5);
 }
 
-#box{
+#box {
     width: 80%;
     margin-left: 10%;
     display: grid;
@@ -151,23 +154,23 @@ h1:after {
     border-bottom: 1px solid rgb(240, 240, 240);
     border-left: 1px solid rgb(240, 240, 240);
     border-right: 1px solid rgb(240, 240, 240);
-    
-    
+
+
 }
 
-.prod_image{
+.prod_image {
     margin-top: 5%;
     width: 100%;
     margin: 15%;
     border-radius: 50px;
-    border: 1px solid rgb(210, 210, 210);  
+    border: 1px solid rgb(210, 210, 210);
 }
 
-.div_margin{
+.div_margin {
     margin: 2%;
 }
 
-#submit_logout{
+#submit_logout {
     margin-top: -5%;
     border: none;
     background-color: transparent;

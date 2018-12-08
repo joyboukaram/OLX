@@ -2,24 +2,11 @@
 require ("../connect.php");
 session_start();
 
-// if (isset($_POST['fileToUpload'])) {
-// 		$fileToUpload = $mysqli->real_escape_string($_POST['fileToUpload']);
-// }else{
-// 	die("Error3");
-// }
-//
-// $filesToUpload = explode (" " , $fileToUpload);
-//
-
-
-
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-
-// Check if image file is a actual image or fake image
 
 $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 if($check !== false) {
@@ -30,24 +17,23 @@ if($check !== false) {
 	$uploadOk = 0;
 }
 
-// Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
 }
-// Check file size
+
 if ($_FILES["fileToUpload"]["size"] > 100000000000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
-// Allow certain file formats
+
 if($imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
 
-// Check if $uploadOk is set to 0 by an error
+
 if ($uploadOk == 0) {
 echo "here";
   }

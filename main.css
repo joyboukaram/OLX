@@ -16,7 +16,7 @@
 }
 
 #loader {
-    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
+    z-index: 1001;
 }
 h1 {
     color: #EEEEEE;

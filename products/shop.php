@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="product.css">
     <meta charset="utf-8">
-  
-  
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="shop.js" defer></script>
-    <script src = "modal.js" defer></script>
-    <script src = "product.js" defer></script>
+    <script src="modal.js" defer></script>
+    <script src="product.js" defer></script>
 
 </head>
 
@@ -21,9 +21,9 @@
         <span id="head">
             <a href="../account/account.php">My Account</a>
             /
-            <img class="icons" src="../images/shopping_cart.png" id = "cart">
+            <img class="icons" src="../images/shopping_cart.png" id="cart">
             /
-            <img class="icons" src="../images/search.png" id = "searchpic">
+            <img class="icons" src="../images/search.png" id="searchpic">
         </span>
 
     </header>
@@ -42,8 +42,8 @@
             <a href="../home.php">Home</a>
             <a href="shop.php">Shop</a>
             <a href="../contact.php">Contact</a>
-            <form method = "GET" action = "../Signout.php">
-                <input id = "submit_logout" type = "submit" value="Logout">
+            <form method="GET" action="../Signout.php">
+                <input id="submit_logout" type="submit" value="Logout">
             </form>
         </div>
 
@@ -302,48 +302,50 @@
 
     <!-- <button id="myBtn">Open Modal</button> -->
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <section id="modalbox">
-        <div id="images_grid">
-            <img class="product_image" id="image1" src="../images/avatar.png">
-            <img class="product_image" id="image2" src="../images/avatar.png">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <section id="modalbox">
+                <div id="images_grid">
+                    <img class="product_image" id="image1" src="../images/avatar.png">
+                    <img class="product_image" id="image2" src="../images/avatar.png">
+                </div>
+                <div id="details">
+                    <h2 id="item_added" class="hidden">Item added!</h2>
+                    <h3 class="h3modal"><i>Name:</i> item</h3>
+                    <h3 class="h3modal"><i>Price:</i> $5.00</h3>
+                    <h3 class="h3modal"><i>Category</i> electronics</h3>
+                    <h3 class="h3modal"><i>Location:</i> place</h3>
+                    <h3 class="h3modal"><i>Description:</i></h3>
+                    <ul>
+                        <li>Year of production: </li><br>
+                        <li>blablabla</li><br>
+                        <li>blablabla</li><br>
+                        <li>blablabla</li><br>
+                        <li>blablabla</li><br>
+
+
+                        <li>blablabla</li><br>
+                        <li>blablabla</li>
+                    </ul>
+                    <h3 class="h3modal"><i>Seller:</i> person</h3>
+                    <form method="POST">
+                        <button id="add_to_cart" class="add_to_cart"><img width="8%" src="../images/cart.png"> Add to
+                            Cart</button>
+                    </form>
+
+
+                    <button id="go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to
+                        Cart</button>
+
+                </div>
+            </section>
         </div>
-        <div id="details">
-        <h2 id = "item_added" class = "hidden">Item added!</h2>
-            <h3 class = "h3modal"><i>Name:</i> item</h3>
-            <h3 class = "h3modal"><i>Price:</i> $5.00</h3>
-            <h3 class = "h3modal"><i>Category</i> electronics</h3>
-            <h3 class = "h3modal"><i>Location:</i> place</h3>
-            <h3 class = "h3modal"><i>Description:</i></h3>
-            <ul>
-                <li>Year of production: </li><br>
-                <li>blablabla</li><br>
-                <li>blablabla</li><br>
-                <li>blablabla</li><br>
-                <li>blablabla</li><br>
 
-
-                <li>blablabla</li><br>
-                <li>blablabla</li>
-            </ul>
-            <h3 class = "h3modal"><i>Seller:</i> person</h3>
-            <form method="POST">
-                <button id = "add_to_cart" class="add_to_cart"><img width="8%" src="../images/cart.png"> Add to Cart</button>
-            </form>
-
-
-            <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="../images/cart.png"> Go to Cart</button>
-
-        </div>
-    </section>
-  </div>
-
-</div>
+    </div>
 
     <footer>
         <div class="container">
