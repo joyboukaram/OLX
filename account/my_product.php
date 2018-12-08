@@ -55,19 +55,19 @@
                 <li>blablabla</li><br>
                 <li>blablabla</li><br>
                 <li>blablabla</li><br>
-                
-                
+
+
                 <li>blablabla</li><br>
                 <li>blablabla</li>
             </ul>
             <h3><i>Seller:</i> person</h3>
             <form method="POST">
                 <button id="edit">Edit Ad</button>
-                
+
             </form>
 
             <form method="GET">
-                    <button id="edit">Delete Ad</button>
+                <button id="edit">Delete Ad</button>
             </form>
 
         </div>

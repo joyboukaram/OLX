@@ -4,7 +4,7 @@
 <head>
     <title>My Account</title>
     <link rel="stylesheet" href="account.css">
-    <script src = "account.js" defer></script>
+    <script src="account.js" defer></script>
 </head>
 
 <body>
@@ -29,12 +29,18 @@ while($count < count($arr)){
 
         <div id="box2">
             <div id="user">
-                <p><b>Name: </b><span class = "capital"><?=$arr[$count]["firstName"] ." ". $arr[$count]["lastName"] ?> </span></p>
-                <p><b>Date of Birth: </b><?=$arr[$count]["birthdate"] ?> </p>
-                <p><b>Email: </b><?=$arr[$count]["email"] ?> </p>
+                <p><b>Name: </b><span class="capital">
+                        <?=$arr[$count]["firstName"] ." ". $arr[$count]["lastName"] ?> </span></p>
+                <p><b>Date of Birth: </b>
+                    <?=$arr[$count]["birthdate"] ?>
+                </p>
+                <p><b>Email: </b>
+                    <?=$arr[$count]["email"] ?>
+                </p>
                 <!-- <p><b>Password</b></p> -->
-                <p><b>Billing Information:</b><span class = "capital"></span></p>
-                <p><b>Shipping Address: </b><span class = "capital"><?=$arr[$count]["address"] ?></span></p>
+                <p><b>Billing Information:</b><span class="capital"></span></p>
+                <p><b>Shipping Address: </b><span class="capital">
+                        <?=$arr[$count]["address"] ?></span></p>
 
                 <a href="../products/my_ads.php">My ads</a>
                 <br><br>
@@ -43,7 +49,7 @@ while($count < count($arr)){
             <a><input type="image" id="back" src="../images/back_button.png"></a>
         </div>
 
-<?php
+        <?php
 $count++;
 } ?>
 

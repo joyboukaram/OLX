@@ -41,9 +41,11 @@ header a {
     border: 1px solid grey;
     padding: 0.5% 2%;
 }
+
 #margin_date {
     margin-bottom: 10%;
 }
+
 nav {
     display: grid;
     grid-template-columns: 10% 40% 25% 25%;
@@ -98,36 +100,36 @@ div#nav a:hover {
 }
 
 
-#box{
-   margin: 2% 5%;
+#box {
+    margin: 2% 5%;
     display: grid;
     grid-template-columns: 20% 80%;
     border: 1px solid black;
     width: 90%;
-    
+
 }
 
-.product_image{
+.product_image {
     padding: 0% 7%;
     width: 85%;
     border-right: 1px solid black;
 }
 
-#image1{
+#image1 {
     padding-top: 7%;
     padding-bottom: 7%;
 }
 
-#image2{
+#image2 {
     padding-bottom: 7%;
 
 }
 
-#details{
+#details {
     margin-left: 5%;
 }
 
-#edit{
+#edit {
     background-color: lightgreen;
     border-radius: 15px;
     padding: 1% 0%;
@@ -138,7 +140,7 @@ div#nav a:hover {
     border: 1px solid black;
 }
 
-#images_grid{
+#images_grid {
     display: flex;
     flex-flow: column;
 }
@@ -154,6 +156,6 @@ footer {
     left: 0;
 }
 
-h3{
+h3 {
     font-weight: bold;
 }
