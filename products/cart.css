@@ -156,8 +156,9 @@ h1:after {
 }
 
 .prod_image{
+    margin-top: 5%;
     width: 100%;
-    margin: 4%;
+    margin: 15%;
     border-radius: 50px;
     border: 1px solid rgb(210, 210, 210);  
 }

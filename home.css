@@ -146,6 +146,7 @@ div.mySlides.fade {
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+    margin-right: -6px;
 }
 
 
@@ -273,4 +274,16 @@ h2:after{
     border: none;
     background-color: transparent;
     font-size: 15px;
+}
+
+#name{
+    text-transform: capitalize;
+    
+}
+
+.open_image{
+    margin-top: -2%;
+    border: 2px solid lightgrey;
+    padding: 2px;
+    border-radius: 15px;
 }

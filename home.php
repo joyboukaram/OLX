@@ -12,7 +12,6 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="products/modal.css">
     <link rel="stylesheet" href="products/product.css">
-
     <script src="home.js" defer></script>
     <script src = "products/modal.js" defer></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
@@ -51,6 +50,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
         </div>
 
     </nav>
+
+    <h1>Welcome <span id = "name"><?=$_SESSION["firt_name"]?> <?=$_SESSION["last_name"]?></span></h1>
 
 
     <div class="slideshow-container">

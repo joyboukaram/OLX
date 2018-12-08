@@ -42,8 +42,8 @@
             <a href="../home.php">Home</a>
             <a href="shop.php">Shop</a>
             <a href="../contact.php">Contact</a>
-            <form method = "GET" action = "Signout.php">
-                <button>Logout</button>
+            <form method = "GET" action = "../Signout.php">
+                <input id = "submit_logout" type = "submit" value="Logout">
             </form>
         </div>
 
