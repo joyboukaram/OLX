@@ -9,8 +9,6 @@ $price = 0;
     <title>My Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="modal.css">
-
-
     <link rel="stylesheet" href="product.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
     <script src="cart.js" defer></script>
@@ -63,7 +61,7 @@ while ($count < count($arr)) {
     <div id="box">
 
         <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="prod_image items"
-            src="<?=$arr[$count][" image"]?>">
+            src="<?=$arr[$count]["image"]?>">
 
 
         <div id="<?=$arr[$count]['name']?>" class="modal">
@@ -101,11 +99,6 @@ while ($count < count($arr)) {
         </div>
 
 
-
-
-
-
-
         <div class="div_margin">
             <div id="new_div">
                 <p><b>
@@ -117,7 +110,7 @@ while ($count < count($arr)) {
             </div>
             <div id="checkbox">
                 <form method="GET" name="Cart">
-                    <input class="checkbox" id="check" value="<?=$arr[$count][" price"]?>" type="checkbox" name="buy">
+                    <input class="checkbox" id="check" value="<?=$arr[$count]["price"]?>" type="checkbox" name="buy">
                 </form>
             </div>
         </div>

@@ -8,6 +8,6 @@ if (isset($_POST['result'])) {
 	die("Error");
 }
 
-  $_SESSION["price"] +=$result ;
+  $_SESSION["price"] += $result ;
   echo $_SESSION["price"] ;
 ?>

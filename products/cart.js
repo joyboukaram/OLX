@@ -30,7 +30,7 @@ function showTotal(event) {
 		},
 		success: function (data) {
 
-			total_price.textContent = data + " LBP";
+			total_price.textContent = data + "LBP";
 
 		}
 	})
