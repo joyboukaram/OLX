@@ -2,6 +2,7 @@
 
 <head>
     <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="contact.css">
     <script src="contact.js" defer></script>
 </head>
@@ -27,6 +28,7 @@
     </div>
 
     <a><input type="image" id="back" src="./images/back_button.png"></a>
+    <a id = "goToIndex" href = "../index.php">Go back to homepage</a>
 
 </body>
 

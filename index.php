@@ -2,11 +2,9 @@
 
 <head>
     <title>Welcome!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="splash.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="index.js" defer></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
@@ -29,7 +27,7 @@
     </div>
 
     <header>
-        Made by Joy & Joseph
+        <span id = "makers">Made by Joy & Joseph</span>
         <span id="head">
             <a href="./login/login.php">Sign in</a>
             /
@@ -49,13 +47,13 @@
         </form>
 
         <button id="ad">+ Place an ad</button>
-
+<div>
         <div id="nav">
-            <a href="">Home</a>
-            <a href="login/login.php">Shop</a>
-            <a href="./contact.php">Contact</a>
+            <a class = "divnav" href="">Home</a>
+            <a class = "divnav" href="login/login.php">Shop</a>
+            <a class = "divnav" href="./contact.php">Contact</a>
         </div>
-
+</div>
     </nav>
 
 

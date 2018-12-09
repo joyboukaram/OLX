@@ -3,6 +3,7 @@
 
 <head>
     <title>My Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="account.css">
     <script src="account.js" defer></script>
 </head>
@@ -47,6 +48,7 @@ while($count < count($arr)){
                 <a href="confirm.php">Edit Profile</a>
             </div>
             <a><input type="image" id="back" src="../images/back_button.png"></a>
+            <a id = "goToIndex" href = "../index.php">Go back to homepage</a>
         </div>
 
         <?php

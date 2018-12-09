@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 
@@ -29,6 +30,8 @@ h1 {
 form {
     margin-top: 10%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .input {
@@ -67,9 +70,85 @@ p#noAccount {
 }
 
 #both img {
-
+    width: 50%;
     height: 50%;
     margin-top: 5%;
     padding-bottom: 20px;
     margin-right: 55px;
+}
+
+@media (max-width: 700px) {
+
+    #both img {
+        display: none;
+    }
+
+
+    h1 {
+        margin-top: 4%;
+        margin-bottom: -10%;
+        font-size: 20px;
+        color: darkslategray;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+    }
+    
+
+    .input {
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 15%;
+        font-size: 15px;
+        margin-left: auto;
+
+        margin-right: auto;
+        background: none;
+    }
+
+    #box {
+        margin-top: 35%;
+        border: 2px solid black;
+        width: 70%;
+        margin-left: 13%;
+        border-radius: 15px;
+        padding: 2%;
+    }
+
+    #submit{
+        width: 100%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+    }
+
+    p#noAccount {
+        margin-top: 5%;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+    }
+
+    body {
+        background-repeat: round;
+    }
+}
+
+@media(max-width: 1270px){
+    #both {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #both img {
+        height: 50%;
+        padding-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    #box{
+
+    margin-bottom: 2%;
+    }
 }

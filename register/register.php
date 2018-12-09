@@ -2,6 +2,7 @@
 
 <head>
     <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="register.css">
     <script type="text/javascript" src="register.js" defer></script>
 </head>
@@ -31,6 +32,7 @@
         <br> Log in <a href="../login/login.php">here</a></p>
 
     <a><input type="image" id="back" src="../images/back_button.png"></a>
+    <a id = "goToIndex" href = "../index.php">Go back to homepage</a>
 </body>
 
 

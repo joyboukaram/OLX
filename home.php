@@ -10,6 +10,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
 
 <head>
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="products/modal.css">
     <link rel="stylesheet" href="products/product.css">
