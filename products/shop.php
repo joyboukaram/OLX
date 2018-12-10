@@ -1,4 +1,9 @@
 <html>
+<?php
+session_start();
+
+
+?>
 
 <head>
     <title>Shop</title>
@@ -7,7 +12,7 @@
     <link rel="stylesheet" href="product.css">
     <meta charset="utf-8">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="shop.js" defer></script>
     <script src="modal.js" defer></script>
@@ -93,22 +98,22 @@
 
     <button id="filter">Filter</button>
     <div id="sort_div" class="hidden">
-        <form>
+        <form method="GET" name="myForm">
             <div id="formsearch">
                 <p class="sort_by_cat">Sort by Price</p>
                 <p class="sort_by_cat">Sort by Date</p>
                 <p class="sort_by_cat">Sort by Location</p>
 
                 <div id="open_price_filter">
-                    <input type="radio" name="price" value="low to high"> Low to high<br>
-                    <input type="radio" name="price" value="high to low"> High to low
+                    <input type="radio" name="price" value="low"> Low to high<br>
+                    <input type="radio" name="price" value="high"> High to low
                 </div>
 
                 <div id="open_date_filter">
-                    <input type="radio" name="date" value="Oldest to most recent">Oldest to
+                    <input type="radio" name="date" value="old">Oldest to
                     most
                     recent<br>
-                    <input type="radio" name="date" value="Most recent to oldest">Most recent to oldest
+                    <input type="radio" name="date" value="new">Most recent to oldest
                 </div>
 
                 <div id="open_location_filter">
@@ -131,15 +136,21 @@
 
         <div id="products">
 
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
+          <?php
+          require("../connect.php");
+  include 'getwomens.php';
+  $count=0 ;
+  while($count < count($arr)){
+
+  ?>
+  <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+  <?php
+  $count++;
+  }
+  ?>
+
 
         </div>
     </div>
@@ -149,15 +160,21 @@
 
         <div id="products">
 
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
-            <img class="items new_image" src="../images/military.jpg">
+          <?php
+          require("../connect.php");
+      include 'getmens.php';
+      $count=0 ;
+      while($count < count($arr)){
+
+      ?>
+      <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+      <?php
+      $count++;
+      }
+      ?>
+
 
         </div>
     </div>
@@ -167,15 +184,20 @@
 
         <div id="products">
 
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
-            <img class="items new_image" src="../images/acc.jpg">
+          <?php
+          require("../connect.php");
+          include 'getelectronics.php';
+          $count=0 ;
+          while($count < count($arr)){
+
+          ?>
+          <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+          <?php
+          $count++;
+          }
+          ?>
 
         </div>
     </div>
@@ -185,15 +207,21 @@
 
         <div id="products">
 
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
-            <img class="items new_image" src="../images/beanie.jpg">
+          <?php
+          require("../connect.php");
+include 'getaccessories.php';
+$count=0 ;
+while($count < count($arr)){
+
+?>
+ <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+<?php
+$count++;
+}
+ ?>
+
 
         </div>
     </div>
@@ -203,15 +231,20 @@
 
         <div id="products">
 
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
-            <img class="items new_image" src="../images/clothes.jpg">
+          <?php
+          require("../connect.php");
+  include 'gethome.php';
+  $count=0 ;
+  while($count < count($arr)){
+
+  ?>
+  <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+  <?php
+  $count++;
+  }
+  ?>
 
         </div>
     </div>
@@ -224,15 +257,20 @@
 
 
         <div id="products">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
-            <img class="items new_image" src="../images/phones.jpg">
+          <?php
+          require("../connect.php");
+include 'getgadgets.php';
+$count=0 ;
+while($count < count($arr)){
+
+?>
+ <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+<?php
+$count++;
+}
+ ?>
 
         </div>
     </div>
@@ -241,15 +279,21 @@
         <h2 class="cat_h2">Sports and Outdoors</h2>
 
         <div id="products">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
-            <img class="items new_image" src="../images/jeans.jpg">
+          <?php
+          require("../connect.php");
+include 'getsports.php';
+$count=0 ;
+while($count < count($arr)){
+
+?>
+ <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+<?php
+$count++;
+}
+ ?>
+
         </div>
     </div>
 
@@ -257,30 +301,42 @@
         <h2 class="cat_h2">Makeup</h2>
 
         <div id="products">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
-            <img class="items new_image" src="../images/purse.jpg">
+          <?php
+          require("../connect.php");
+include 'getmakeups.php';
+$count=0 ;
+while($count < count($arr)){
+
+?>
+ <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+<?php
+$count++;
+}
+ ?>
+
         </div>
     </div>
 
     <div id="cars" class="hidden">
         <h2 class="cat_h2">Cars</h2>
         <div id="products">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
-            <img class="items new_image" src="../images/shoes.jpg">
+          <?php
+          require("../connect.php");
+          include 'getcars.php';
+          $count=0 ;
+          while($count < count($arr)){
+
+          ?>
+          <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+          <?php
+          $count++;
+          }
+          ?>
+
         </div>
     </div>
 
@@ -288,15 +344,22 @@
         <h2 class="cat_h2">Services</h2>
 
         <div id="products">
-            <img id="myBtn" class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
-            <img class="items new_image" src="../images/dress.jpg">
+            <!-- <img id="myBtn" class="items new_image" src="../images/dress.jpg"> -->
+            <?php
+            require("../connect.php");
+  include 'getservices.php';
+  $count=0 ;
+  while($count < count($arr)){
+
+  ?>
+   <img class="items new_image" src="<?=$arr[$count]['image']?>">
+
+
+  <?php
+  $count++;
+  }
+   ?>
+
         </div>
     </div>
 

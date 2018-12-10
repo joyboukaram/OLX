@@ -1,5 +1,4 @@
 
-var add_to_cart = document.querySelector("#addtocart");
 
 	add_to_cart.addEventListener("click", function(){
 		add_to_cart.classList.add("hidden");

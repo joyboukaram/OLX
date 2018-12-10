@@ -1,3 +1,52 @@
+var rad = document.myForm.price;
+for(var i = 0; i < rad.length; i++) {
+			rad[i].onclick = function() {
+			 $.ajax({
+				type: 'POST',
+					url: 'sortprice.php',
+					data: {
+							price: this.value,
+					},
+
+					success : function(data){
+            console.log(data);
+					}
+			 });
+
+			};
+	}
+
+  $(document).ajaxStop(function(){
+    setTimeout("window.location = 'shop.php'",100);
+  });
+
+
+
+  var rad1 = document.myForm.date;
+  for(var i = 0; i < rad.length; i++) {
+  			rad1[i].onclick = function() {
+  			 $.ajax({
+  				type: 'POST',
+  					url: 'sortdate.php',
+  					data: {
+  							price: this.value,
+  					},
+
+  					success : function(data){
+              console.log(data);
+  					}
+  			 });
+
+  			};
+  	}
+
+    $(document).ajaxStop(function(){
+      setTimeout("window.location = 'shop.php'",100);
+    });
+
+
+
+
 const arr = [women, men, electronics, jewelry, home, bags, children, sports, beauty, cars];
 
 
