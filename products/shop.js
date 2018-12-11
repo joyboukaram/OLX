@@ -188,3 +188,5 @@ add_to_cart.addEventListener("click", event => {
 go_to_cart.addEventListener("click", event => {
   window.open("cart.php", "_self");
 })
+
+

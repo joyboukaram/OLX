@@ -21,7 +21,7 @@ session_start();
 
 <body>
     <header>
-        <span id = "makers">Made by Joy & Joseph</span>
+        <span id="makers">Made by Joy & Joseph</span>
         <span id="head">
             <a href="../account/account.php">My Account</a>
             /
@@ -83,13 +83,106 @@ session_start();
         <div id="latest">
             <h3 class="h3shop">WHAT'S NEW</h3>
             <div id="whats_new">
-                <img class="new_image" src="../images/monkey.jpg" width="100%">
 
-                <img class="new_image" src="../images/monkey.jpg" width="100%">
-                <img class="new_image" src="../images/monkey.jpg" width="100%">
-                <img class="new_image" src="../images/monkey.jpg" width="100%">
+
+
+
+
+
+                <?php
+include 'getlatest.php';
+$count=0 ;
+while($count < 4 && $count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
+
+
+?>
+                <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items"
+                    src="<?=$images[0]?>">
+
+                <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' "
+                            class="close">&times;</span>
+                        <section id="modalbox">
+                            <div id="images_grid">
+                                <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                                <img class="product_image" src="<?=$images[$counter]?>">
+                                <?php
+														$counter++;
+													} ?>
+                            </div>
+
+                            <div id="details">
+
+                                <h3 class="h3modal"><i>Name:</i>
+                                    <?=$arr[$count]['name']?>
+                                </h3>
+                                <h3 class="h3modal"><i>Price:</i>
+                                    <?=$arr[$count]['price']?>
+                                </h3>
+                                <h3 class="h3modal"><i>Category</i>
+                                    <?=$arr[$count]['categorie']?>
+                                </h3>
+                                <h3 class="h3modal"><i>Location:</i>
+                                    <?=$arr[$count]['location']?>
+                                </h3>
+                                <h3 class="h3modal"><i>Description:</i></h3>
+                                <ul>
+                                    <?=$arr[$count]['description']?>
+                                </ul>
+                                <h3 class="h3modal"><i>Seller:</i>
+                                    <?=$arr[$count]['seller']?>
+                                </h3>
+                                <!-- <form id="addCart"> -->
+
+                                <div id="addCart">
+                                    <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                            width="8%" src="../images/cart.png"> Add to Cart</button>
+                                    <!-- </form> -->
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <?php
+		$count++;
+					}
+?>
+
+
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
+    </div>
     </div>
 
 
@@ -140,77 +233,6 @@ session_start();
           require("../connect.php");
   include 'getwomens.php';
   $count=0 ;
-  while($count < count($arr)){
-
-  ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
-
-
-            <?php
-  $count++;
-  }
-  ?>
-
-
-        </div>
-    </div>
-
-    <div id="men" class="hidden">
-        <h2 class="cat_h2">Men's Clothing</h2>
-
-        <div id="products">
-
-            <?php
-          require("../connect.php");
-      include 'getmens.php';
-      $count=0 ;
-      while($count < count($arr)){
-
-      ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
-
-
-            <?php
-      $count++;
-      }
-      ?>
-
-
-        </div>
-    </div>
-
-    <div id="electronics" class="hidden">
-        <h2 class="cat_h2">Electronics</h2>
-
-        <div id="products">
-
-            <?php
-          require("../connect.php");
-          include 'getelectronics.php';
-          $count=0 ;
-          while($count < count($arr)){
-
-          ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
-
-
-            <?php
-          $count++;
-          }
-          ?>
-
-        </div>
-    </div>
-
-    <div id="jewelry" class="hidden">
-        <h2 class="cat_h2">Accessories</h2>
-
-        <div id="products">
-
-            <?php
-          require("../connect.php");
-include 'getaccessories.php';
-$count=0 ;
 while($count < count($arr)){
 		$images = explode(" " ,$arr[$count]['image']);
 		$countimage = count($images);
@@ -218,7 +240,7 @@ while($count < count($arr)){
 
 
 ?>
-            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="products/<?=$images[0]?>">
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
 
             <div id="<?=$arr[$count]['name']?>" class="modal">
 
@@ -227,18 +249,18 @@ while($count < count($arr)){
                     <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
                     <section id="modalbox">
                         <div id="images_grid">
-													<?php
+                            <?php
 													$counter = 0;
 													while($counter < $countimage-1) {
 ?>
-														<img class="product_image" src="products/<?=$images[$counter]?>">
-														<?php
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
 														$counter++;
 													} ?>
                         </div>
-                        
+
                         <div id="details">
-                            
+
                             <h3 class="h3modal"><i>Name:</i>
                                 <?=$arr[$count]['name']?>
                             </h3>
@@ -260,11 +282,244 @@ while($count < count($arr)){
                             </h3>
                             <!-- <form id="addCart"> -->
 
-                            <div id = "addCart">
-                                <button value="<?=$arr[$count]['name']?>" id="addtocart"  class="hello add_to_cart"><img
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
                                         width="8%" src="../images/cart.png"> Add to Cart</button>
                                 <!-- </form> -->
-                            
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <?php
+		$count++;
+					}
+?>
+
+        </div>
+    </div>
+
+
+    <div id="men" class="hidden">
+        <h2 class="cat_h2">Men's Clothing</h2>
+
+        <div id="products">
+
+            <?php
+          require("../connect.php");
+      include 'getmens.php';
+      $count=0 ;
+      while($count < count($arr)){
+              $images = explode(" " ,$arr[$count]['image']);
+              $countimage = count($images);
+          //	echo $countimage;
+      
+      
+      ?>
+                  <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
+      
+                  <div id="<?=$arr[$count]['name']?>" class="modal">
+      
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                          <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                          <section id="modalbox">
+                              <div id="images_grid">
+                                  <?php
+                                                          $counter = 0;
+                                                          while($counter < $countimage-1) {
+      ?>
+                                  <img class="product_image" src="<?=$images[$counter]?>">
+                                  <?php
+                                                              $counter++;
+                                                          } ?>
+                              </div>
+      
+                              <div id="details">
+      
+                                  <h3 class="h3modal"><i>Name:</i>
+                                      <?=$arr[$count]['name']?>
+                                  </h3>
+                                  <h3 class="h3modal"><i>Price:</i>
+                                      <?=$arr[$count]['price']?>
+                                  </h3>
+                                  <h3 class="h3modal"><i>Category</i>
+                                      <?=$arr[$count]['categorie']?>
+                                  </h3>
+                                  <h3 class="h3modal"><i>Location:</i>
+                                      <?=$arr[$count]['location']?>
+                                  </h3>
+                                  <h3 class="h3modal"><i>Description:</i></h3>
+                                  <ul>
+                                      <?=$arr[$count]['description']?>
+                                  </ul>
+                                  <h3 class="h3modal"><i>Seller:</i>
+                                      <?=$arr[$count]['seller']?>
+                                  </h3>
+                                  <!-- <form id="addCart"> -->
+      
+                                  <div id="addCart">
+                                      <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                              width="8%" src="../images/cart.png"> Add to Cart</button>
+                                      <!-- </form> -->
+      
+                                  </div>
+                              </div>
+                          </section>
+                      </div>
+                  </div>
+      
+                  <?php
+              $count++;
+                          }
+      ?>
+      
+              </div>
+          </div>
+      
+    <div id="electronics" class="hidden">
+        <h2 class="cat_h2">Electronics</h2>
+
+        <div id="products">
+
+            <?php
+          require("../connect.php");
+          include 'getelectronics.php';
+          $count=0 ;
+          while($count < count($arr)){
+                  $images = explode(" " ,$arr[$count]['image']);
+                  $countimage = count($images);
+              //	echo $countimage;
+          
+          
+          ?>
+                      <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
+          
+                      <div id="<?=$arr[$count]['name']?>" class="modal">
+          
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                              <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                              <section id="modalbox">
+                                  <div id="images_grid">
+                                      <?php
+                                                              $counter = 0;
+                                                              while($counter < $countimage-1) {
+          ?>
+                                      <img class="product_image" src="<?=$images[$counter]?>">
+                                      <?php
+                                                                  $counter++;
+                                                              } ?>
+                                  </div>
+          
+                                  <div id="details">
+          
+                                      <h3 class="h3modal"><i>Name:</i>
+                                          <?=$arr[$count]['name']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Price:</i>
+                                          <?=$arr[$count]['price']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Category</i>
+                                          <?=$arr[$count]['categorie']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Location:</i>
+                                          <?=$arr[$count]['location']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Description:</i></h3>
+                                      <ul>
+                                          <?=$arr[$count]['description']?>
+                                      </ul>
+                                      <h3 class="h3modal"><i>Seller:</i>
+                                          <?=$arr[$count]['seller']?>
+                                      </h3>
+                                      <!-- <form id="addCart"> -->
+          
+                                      <div id="addCart">
+                                          <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                                  width="8%" src="../images/cart.png"> Add to Cart</button>
+                                          <!-- </form> -->
+          
+                                      </div>
+                                  </div>
+                              </section>
+                          </div>
+                      </div>
+          
+                      <?php
+                  $count++;
+                              }
+          ?>
+          
+                  </div>
+              </div>
+          
+
+    <div id="jewelry" class="hidden">
+        <h2 class="cat_h2">Accessories</h2>
+
+        <div id="products">
+
+            <?php
+          require("../connect.php");
+include 'getaccessories.php';
+$count=0 ;
+while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
+
+
+?>
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
+
+            <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                    <section id="modalbox">
+                        <div id="images_grid">
+                            <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
+														$counter++;
+													} ?>
+                        </div>
+
+                        <div id="details">
+
+                            <h3 class="h3modal"><i>Name:</i>
+                                <?=$arr[$count]['name']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Price:</i>
+                                <?=$arr[$count]['price']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Category</i>
+                                <?=$arr[$count]['categorie']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Location:</i>
+                                <?=$arr[$count]['location']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Description:</i></h3>
+                            <ul>
+                                <?=$arr[$count]['description']?>
+                            </ul>
+                            <h3 class="h3modal"><i>Seller:</i>
+                                <?=$arr[$count]['seller']?>
+                            </h3>
+                            <!-- <form id="addCart"> -->
+
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                        width="8%" src="../images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+
                             </div>
                         </div>
                     </section>
@@ -289,16 +544,70 @@ while($count < count($arr)){
           require("../connect.php");
   include 'gethome.php';
   $count=0 ;
-  while($count < count($arr)){
+while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
 
-  ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
+?>
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
+
+            <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                    <section id="modalbox">
+                        <div id="images_grid">
+                            <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
+														$counter++;
+													} ?>
+                        </div>
+
+                        <div id="details">
+
+                            <h3 class="h3modal"><i>Name:</i>
+                                <?=$arr[$count]['name']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Price:</i>
+                                <?=$arr[$count]['price']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Category</i>
+                                <?=$arr[$count]['categorie']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Location:</i>
+                                <?=$arr[$count]['location']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Description:</i></h3>
+                            <ul>
+                                <?=$arr[$count]['description']?>
+                            </ul>
+                            <h3 class="h3modal"><i>Seller:</i>
+                                <?=$arr[$count]['seller']?>
+                            </h3>
+                            <!-- <form id="addCart"> -->
+
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                        width="8%" src="../images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
             <?php
-  $count++;
-  }
-  ?>
+		$count++;
+					}
+?>
 
         </div>
     </div>
@@ -316,18 +625,73 @@ while($count < count($arr)){
 include 'getgadgets.php';
 $count=0 ;
 while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
+
 
 ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
 
+            <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                    <section id="modalbox">
+                        <div id="images_grid">
+                            <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
+														$counter++;
+													} ?>
+                        </div>
+
+                        <div id="details">
+
+                            <h3 class="h3modal"><i>Name:</i>
+                                <?=$arr[$count]['name']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Price:</i>
+                                <?=$arr[$count]['price']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Category</i>
+                                <?=$arr[$count]['categorie']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Location:</i>
+                                <?=$arr[$count]['location']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Description:</i></h3>
+                            <ul>
+                                <?=$arr[$count]['description']?>
+                            </ul>
+                            <h3 class="h3modal"><i>Seller:</i>
+                                <?=$arr[$count]['seller']?>
+                            </h3>
+                            <!-- <form id="addCart"> -->
+
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                        width="8%" src="../images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
             <?php
-$count++;
-}
- ?>
+		$count++;
+					}
+?>
 
         </div>
     </div>
+
 
     <div id="sports" class="hidden">
         <h2 class="cat_h2">Sports and Outdoors</h2>
@@ -338,15 +702,69 @@ $count++;
 include 'getsports.php';
 $count=0 ;
 while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
+
 
 ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
 
+            <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                    <section id="modalbox">
+                        <div id="images_grid">
+                            <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
+														$counter++;
+													} ?>
+                        </div>
+
+                        <div id="details">
+
+                            <h3 class="h3modal"><i>Name:</i>
+                                <?=$arr[$count]['name']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Price:</i>
+                                <?=$arr[$count]['price']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Category</i>
+                                <?=$arr[$count]['categorie']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Location:</i>
+                                <?=$arr[$count]['location']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Description:</i></h3>
+                            <ul>
+                                <?=$arr[$count]['description']?>
+                            </ul>
+                            <h3 class="h3modal"><i>Seller:</i>
+                                <?=$arr[$count]['seller']?>
+                            </h3>
+                            <!-- <form id="addCart"> -->
+
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                        width="8%" src="../images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
             <?php
-$count++;
-}
- ?>
+		$count++;
+					}
+?>
 
         </div>
     </div>
@@ -360,15 +778,69 @@ $count++;
 include 'getmakeups.php';
 $count=0 ;
 while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
+
 
 ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
 
+            <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                    <section id="modalbox">
+                        <div id="images_grid">
+                            <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
+														$counter++;
+													} ?>
+                        </div>
+
+                        <div id="details">
+
+                            <h3 class="h3modal"><i>Name:</i>
+                                <?=$arr[$count]['name']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Price:</i>
+                                <?=$arr[$count]['price']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Category</i>
+                                <?=$arr[$count]['categorie']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Location:</i>
+                                <?=$arr[$count]['location']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Description:</i></h3>
+                            <ul>
+                                <?=$arr[$count]['description']?>
+                            </ul>
+                            <h3 class="h3modal"><i>Seller:</i>
+                                <?=$arr[$count]['seller']?>
+                            </h3>
+                            <!-- <form id="addCart"> -->
+
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                        width="8%" src="../images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
             <?php
-$count++;
-}
- ?>
+		$count++;
+					}
+?>
 
         </div>
     </div>
@@ -381,18 +853,73 @@ $count++;
           include 'getcars.php';
           $count=0 ;
           while($count < count($arr)){
-
+                  $images = explode(" " ,$arr[$count]['image']);
+                  $countimage = count($images);
+              //	echo $countimage;
+          
+          
           ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
-
-
-            <?php
-          $count++;
-          }
+                      <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
+          
+                      <div id="<?=$arr[$count]['name']?>" class="modal">
+          
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                              <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                              <section id="modalbox">
+                                  <div id="images_grid">
+                                      <?php
+                                                              $counter = 0;
+                                                              while($counter < $countimage-1) {
           ?>
-
-        </div>
-    </div>
+                                      <img class="product_image" src="<?=$images[$counter]?>">
+                                      <?php
+                                                                  $counter++;
+                                                              } ?>
+                                  </div>
+          
+                                  <div id="details">
+          
+                                      <h3 class="h3modal"><i>Name:</i>
+                                          <?=$arr[$count]['name']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Price:</i>
+                                          <?=$arr[$count]['price']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Category</i>
+                                          <?=$arr[$count]['categorie']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Location:</i>
+                                          <?=$arr[$count]['location']?>
+                                      </h3>
+                                      <h3 class="h3modal"><i>Description:</i></h3>
+                                      <ul>
+                                          <?=$arr[$count]['description']?>
+                                      </ul>
+                                      <h3 class="h3modal"><i>Seller:</i>
+                                          <?=$arr[$count]['seller']?>
+                                      </h3>
+                                      <!-- <form id="addCart"> -->
+          
+                                      <div id="addCart">
+                                          <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                                  width="8%" src="../images/cart.png"> Add to Cart</button>
+                                          <!-- </form> -->
+          
+                                      </div>
+                                  </div>
+                              </section>
+                          </div>
+                      </div>
+          
+                      <?php
+                  $count++;
+                              }
+          ?>
+          
+                  </div>
+              </div>
+          
 
     <div id="bags" class="hidden">
         <h2 class="cat_h2">Services</h2>
@@ -403,16 +930,70 @@ $count++;
             require("../connect.php");
   include 'getservices.php';
   $count=0 ;
-  while($count < count($arr)){
+while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
 
-  ?>
-            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
+?>
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="<?=$images[0]?>">
+
+            <div id="<?=$arr[$count]['name']?>" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
+                    <section id="modalbox">
+                        <div id="images_grid">
+                            <?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+                            <img class="product_image" src="<?=$images[$counter]?>">
+                            <?php
+														$counter++;
+													} ?>
+                        </div>
+
+                        <div id="details">
+
+                            <h3 class="h3modal"><i>Name:</i>
+                                <?=$arr[$count]['name']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Price:</i>
+                                <?=$arr[$count]['price']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Category</i>
+                                <?=$arr[$count]['categorie']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Location:</i>
+                                <?=$arr[$count]['location']?>
+                            </h3>
+                            <h3 class="h3modal"><i>Description:</i></h3>
+                            <ul>
+                                <?=$arr[$count]['description']?>
+                            </ul>
+                            <h3 class="h3modal"><i>Seller:</i>
+                                <?=$arr[$count]['seller']?>
+                            </h3>
+                            <!-- <form id="addCart"> -->
+
+                            <div id="addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
+                                        width="8%" src="../images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
             <?php
-  $count++;
-  }
-   ?>
+		$count++;
+					}
+?>
 
         </div>
     </div>

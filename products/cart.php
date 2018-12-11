@@ -72,7 +72,7 @@ while ($count < count($arr)) {
                 <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
                 <section id="modalbox">
                     <div id="images_grid">
-                        <img class="product_image" id="image1" src="<?=$arr[$count]['image']?>">
+                        <img class="product_image" id="image1" src="uploads/<?=$arr[$count]['image']?>">
                         <img class="product_image" id="image2" src="<?=$arr[$count]['image']?>">
                     </div>
                     <div id="details">
