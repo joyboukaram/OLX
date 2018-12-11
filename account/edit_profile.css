@@ -98,8 +98,6 @@ p {
 @media(max-width: 900px) {
 
     #products {
-        /* grid-template-columns: 25% 25% 25% 25%;
-        grid-     */
         grid-template-columns: none
     }
 

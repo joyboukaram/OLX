@@ -134,7 +134,7 @@ while($count < count($arr)){
                         </div>
                         
                         <div id="details">
-                            <h2 id="item_added" class="hidden">Item added!</h2>
+                            
                             <h3 class="h3modal"><i>Name:</i>
                                 <?=$arr[$count]['name']?>
                             </h3>
