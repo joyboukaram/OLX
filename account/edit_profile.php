@@ -3,6 +3,7 @@
 <head>
     <title>My Account</title>
     <link rel="stylesheet" href="edit_profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 

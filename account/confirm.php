@@ -4,6 +4,7 @@
 
     <title>Confirm</title>
     <link rel="stylesheet" href="confirm.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="confirm.js" defer></script>
 
 </head>
