@@ -116,7 +116,7 @@ $email= $_SESSION["email"];
   $stmt->execute();
 
 	$_SESSION["done"] = true;
-//	header("Location:../home.php");
+  header("Location:../home.php");
 
 
 ?>
