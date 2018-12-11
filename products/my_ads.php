@@ -2,9 +2,9 @@
 
 <head>
     <title>My ads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="ads.css">
     <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet" href="product.css">
     <script src="ads.js" defer></script>
     <script src = "modal.js" defer></script>
 
@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        Made by Joy & Joseph
+        <span id = "makers">Made by Joy & Joseph</span>
         <span id="head">
             <a href="../account/account.php">My Account</a>
             /
@@ -33,7 +33,7 @@
         </form>
 
         <button id="ad" href="">+ Place an ad</button>
-
+<div>
         <div id="nav">
             <a href="../home.php">Home</a>
             <a href="shop.php">Shop</a>
@@ -42,7 +42,7 @@
                 <input id = "submit_logout" type = "submit" value="Logout">
             </form>
         </div>
-
+</div>
     </nav>
 
     <h1>My ads</h1>

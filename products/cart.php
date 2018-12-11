@@ -9,7 +9,7 @@ $price = 0;
     <title>My Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet" href="product.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
     <script src="cart.js" defer></script>
 
@@ -18,7 +18,7 @@ $price = 0;
 <body>
 
     <header>
-        Made by Joy & Joseph
+        <span id = "makers">Made by Joy & Joseph</span>
         <span id="head">
             <a href="../account/account.php">My Account</a>
             /
@@ -38,14 +38,15 @@ $price = 0;
         </form>
 
         <button id="ad" href="">+ Place an ad</button>
-
-        <div id="nav">
-            <a href="../home.php">Home</a>
-            <a href="shop.php">Shop</a>
-            <a href="../contact.php">Contact</a>
-            <form method="GET" action="../Signout.php">
-                <input id="submit_logout" type="submit" value="Logout">
-            </form>
+        <div>
+            <div id="nav">
+                <a href="../home.php">Home</a>
+                <a href="shop.php">Shop</a>
+                <a href="../contact.php">Contact</a>
+                <form method="GET" action="../Signout.php">
+                    <input id="submit_logout" type="submit" value="Logout">
+                </form>
+            </div>
         </div>
 
     </nav>
@@ -61,7 +62,7 @@ while ($count < count($arr)) {
     <div id="box">
 
         <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="prod_image items"
-            src="<?=$arr[$count]["image"]?>">
+            src="<?=$arr[$count][" image"]?>">
 
 
         <div id="<?=$arr[$count]['name']?>" class="modal">
@@ -110,7 +111,7 @@ while ($count < count($arr)) {
             </div>
             <div id="checkbox">
                 <form method="GET" name="Cart">
-                    <input class="checkbox" id="check" value="<?=$arr[$count]["price"]?>" type="checkbox" name="buy">
+                    <input class="checkbox" id="check" value="<?=$arr[$count][" price"]?>" type="checkbox" name="buy">
                 </form>
             </div>
         </div>

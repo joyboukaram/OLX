@@ -40,12 +40,26 @@ nav {
     border-right: 1px solid rgb(240, 240, 240);
 }
 
+#submit_logout {
+    margin-top: -5%;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+input#submit {
+    border: 1px solid grey;
+    background-color: transparent;
+}
+
 nav form input#search {
     margin-left: 5%;
     width: 60%;
     padding: 1%;
     margin-top: 5%;
     margin-left: 15%;
+    border: 1px solid lightgray;
 }
 
 #logo {
@@ -54,10 +68,21 @@ nav form input#search {
 }
 
 div#nav{
+    
+        float: right;
+        position: absolute;
+        right: 60px;
+        width: 200px;
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
 
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    margin-left: 30%;
+div#nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
 }
 
 div#nav a:hover {
@@ -116,9 +141,165 @@ img{
     flex-flow: column;
 }
 
-#submit_logout{
-    margin-top: -5%;
-    border: none;
-    background-color: transparent;
-    font-size: 15px;
+@media (max-width: 1120px) {
+    #ad {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    #ad {
+        text-align: center;
+        padding: 1% 2%;
+        font-size: 20px;
+        color: white;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: rgb(109, 44, 44);
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2.5%;
+        width: 100%;
+        height: 70%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1.2fr;
+        grid-template-columns: none;
+        width: 100%;
+    }
+
+    .slideshow-container {
+        max-width: 100%
+    }
+
+    div#nav {
+        display: grid;
+        padding-top: 1px;
+        right: inherit;
+        float: none;
+        width: 100%;
+        grid-template-columns: none;
+    }
+
+    div#nav a,
+    div#nav input {
+        margin-left: 0;
+        margin-right: 0;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    div#nav input {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 46%;
+    }
+
+
+
+    #logo {
+        width: 40%;
+        padding: 3%;
+        margin-left: 25%;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 450px) {
+    #makers {
+        display: none;
+    }
+
+    header {
+        height: 2%;
+    }
+
+    #ad {
+        text-align: center;
+        padding: 1% 2%;
+        font-size: 14px;
+        color: white;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: rgb(109, 44, 44);
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2.5%;
+        width: 100%;
+        height: 70%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1.2fr;
+        grid-template-columns: none;
+        width: 100%;
+    }
+
+    div#nav {
+
+        display: flex;
+        flex-direction: row;
+        padding-top: 1px;
+        right: inherit;
+        float: none;
+        width: 100%;
+    }
+
+    div#nav a, div#nav input {
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+
+    #logo {
+        width: 40%;
+        padding: 3%;
+        margin-left: 25%;
+    }
+
+    .divnav {
+        padding-bottom: 20px;
+    }
+
+    nav form input#search {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    input#submit {
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-top: 10px;
+        
+    }
+    div#nav input{
+        padding: 0;
+        margin-right: 20px;
+    }
+
+    div#nav a, div#nav input {
+        margin-left: 0;
+    }
+
+    #head{
+        float: none;
+    }
+
+    #total{
+        width: 100%;
+        margin-left: 0;
+    }
 }

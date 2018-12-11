@@ -30,8 +30,6 @@ button a {
 form {
     display: grid;
     grid-auto-rows: 1fr 1fr 1fr 1fr 1fr;
-
-
 }
 
 .input {

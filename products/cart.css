@@ -30,9 +30,6 @@ form {
     margin-bottom: 0px;
 }
 
-img {
-    cursor: pointer;
-}
 
 nav {
     display: grid;
@@ -50,24 +47,24 @@ nav form input#search {
     padding: 1%;
     margin-top: 5%;
     margin-left: 15%;
+    border: 1px solid lightgray;
 }
 
-#logo {
-    width: 100%;
-    padding: 3%;
-}
 
 div#nav {
     float: right;
+    position: absolute;
+    right: 60px;
+    width: 200px;
+    margin-top: 2%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    margin-left: 30%;
-    margin-top: 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .div_margin {
     display: grid;
     grid-template-columns: 90% 10%;
+    margin: 2%;
 }
 
 
@@ -99,16 +96,6 @@ div#nav {
     width: 40px;
     height: 40px;
     margin-top: 50%;
-}
-
-div#nav a {
-
-    text-decoration: none;
-    color: black;
-}
-
-div#nav a:hover {
-    color: navy;
 }
 
 #ad {
@@ -166,13 +153,306 @@ h1:after {
     border: 1px solid rgb(210, 210, 210);
 }
 
-.div_margin {
-    margin: 2%;
-}
 
 #submit_logout {
     margin-top: -5%;
     border: none;
     background-color: transparent;
     font-size: 15px;
+    margin-left: 10px;
+}
+
+
+#formsearch {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#form_button {
+    margin: 2% 47%;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 0.5% 2%;
+}
+
+#margin_date {
+    margin-bottom: 10%;
+}
+
+input#search {
+    margin-left: 5%;
+    width: 60%;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+input#submit {
+    border: 1px solid grey;
+    background-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+#logo {
+    width: 100%;
+    padding: 3%;
+}
+
+#item_added {
+    text-align: center;
+    color: green;
+}
+
+
+div#nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+div#nav a:hover {
+    color: navy;
+}
+
+#modalbox {
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border: 1px solid black;
+    /* width: 90%; */
+
+}
+
+.product_image {
+    padding: 0% 7%;
+    width: 60%;
+    border-right: 1px solid black;
+}
+
+#image1 {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+#image2 {
+    padding-bottom: 7%;
+
+}
+
+#details {
+    margin-left: -10%;
+}
+
+#remove_from_cart {
+    background-color: crimson;
+
+}
+
+.add_to_cart {
+    background-color: lightgreen;
+    border-radius: 15px;
+    padding: 1% 0%;
+    margin-top: 5%;
+    font-size: 16px;
+    float: right;
+    margin-right: 2%;
+    width: 15%;
+    border: 1px solid black;
+}
+
+#images_grid {
+    display: flex;
+    flex-flow: column;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: rgb(2, 26, 40);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.h3modal {
+
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1100px) {
+    #ad {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    #ad {
+        text-align: center;
+        padding: 1% 2%;
+        font-size: 20px;
+        color: white;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: rgb(109, 44, 44);
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2.5%;
+        width: 100%;
+        height: 70%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1.2fr;
+        grid-template-columns: none;
+        width: 100%;
+    }
+
+    .slideshow-container {
+        max-width: 100%
+    }
+
+    div#nav {
+        display: grid;
+        padding-top: 1px;
+        right: inherit;
+        float: none;
+        width: 100%;
+        grid-template-columns: none;
+    }
+
+    div#nav a,
+    div#nav input {
+        margin-left: 0;
+        margin-right: 0;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    div#nav input {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 46%;
+    }
+
+
+
+    #logo {
+        width: 40%;
+        padding: 3%;
+        margin-left: 25%;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 450px) {
+    #makers {
+        display: none;
+    }
+
+    header {
+        height: 2%;
+    }
+
+    #ad {
+        text-align: center;
+        padding: 1% 2%;
+        font-size: 14px;
+        color: white;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: rgb(109, 44, 44);
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2.5%;
+        width: 100%;
+        height: 70%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1.2fr;
+        grid-template-columns: none;
+        width: 100%;
+    }
+
+    div#nav {
+
+        display: flex;
+        flex-direction: row;
+        padding-top: 1px;
+        right: inherit;
+        float: none;
+        width: 100%;
+    }
+
+    div#nav a, div#nav input {
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+
+    #logo {
+        width: 40%;
+        padding: 3%;
+        margin-left: 25%;
+    }
+
+    .divnav {
+        padding-bottom: 20px;
+    }
+
+    nav form input#search {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    input#submit {
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-top: 10px;
+        
+    }
+    div#nav input{
+        padding: 0;
+        margin-right: 20px;
+    }
+
+    div#nav a, div#nav input {
+        margin-left: 0;
+    }
+
+    #head{
+        float: none;
+    }
+
+    #total{
+        width: 100%;
+        margin-left: 0;
+    }
 }

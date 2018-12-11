@@ -12,7 +12,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <title>Place an Ad</title>
     <link rel="stylesheet" href="ad.css">
     <script src="ad.js" defer></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <meta charset=utf-8 />
