@@ -13,7 +13,7 @@
 
 
 
-    <form method="POST" action="signup.php">
+    <form method="POST" action="signup.php" enctype="multipart/form-data" name="formUploadFile">
         <input class="input capital" type="text" placeholder="first name" name="first_name" required>
         <input class="input capital" type="text" placeholder="last name" name="last_name" required>
         <input class="input" type="email" placeholder="email" name="email" required>

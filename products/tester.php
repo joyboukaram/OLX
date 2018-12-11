@@ -1,16 +1,34 @@
 <?php
 
-require("../connect.php");
-$arr = [];
-$stmt = $mysqli->prepare("SELECT * FROM ads order by price");
-$stmt->execute();
-$result = $stmt->get_result();
-while($row = $result->fetch_assoc()) {
-  $arr[] = $row;
-  echo $row["name"];
+require ("../connect.php");
+session_start();
+
+if (isset($_POST['result'])) {
+    $result = $mysqli->real_escape_string($_POST['result']);
+}else{
+	die("Error");
 }
 
-$stmt->close();
+
+// if(!is_array($_SESSION['cart']))
+//   {
+//     $_SESSION['cart'] = array();
+//     array_push($_SESSION['cart'], $result);
+//   }
+//
+//   else{
+// array_push($_SESSION['cart'], $result);
+// }
+$_SESSION['cart'].= " ". $result ;
+$cartToUpload = $_SESSION['cart'];
+$email = $_SESSION["email"];
+
+// $email="joseph@gmail.com" ;
+// $cartToUpload = "tett" ;
+
+$stmt = $mysqli->prepare("Update users set cart = ? where email = ?");
+$stmt->bind_param("ss",$cartToUpload , $email);
+$stmt->execute();
 
 
 

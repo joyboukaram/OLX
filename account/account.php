@@ -23,7 +23,7 @@ while($count < count($arr)){
 
         <div id="profile_pic">
 
-            <img id="avatar" src="../images/avatar.png">
+            <img id="avatar" src="../register/<?=$arr[$count]["image"]?>">
 
         </div>
 

@@ -58,12 +58,13 @@ $price = 0;
 include 'getcart.php';
 $count = 0;
 while ($count < count($arr)) {
-
+  $images = explode(" " ,$arr[$count]['image']);
+  $countimage = count($images);
     ?>
     <div id="box">
 
         <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="prod_image items"
-            src="<?=$arr[$count][" image"]?>">
+            src="<?=$images[0]?>">
 
 
         <div id="<?=$arr[$count]['name']?>" class="modal">
@@ -72,8 +73,14 @@ while ($count < count($arr)) {
                 <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
                 <section id="modalbox">
                     <div id="images_grid">
-                        <img class="product_image" id="image1" src="uploads/<?=$arr[$count]['image']?>">
-                        <img class="product_image" id="image2" src="<?=$arr[$count]['image']?>">
+                      <?php
+                      $counter = 0;
+                      while($counter < $countimage-1) {
+                    ?>
+                        <img class="product_image" src="<?=$images[$counter]?>">
+                        <?php
+                        $counter++;
+                      } ?>
                     </div>
                     <div id="details">
                         <h3 class="h3modal"><i>Name:</i>
@@ -112,7 +119,7 @@ while ($count < count($arr)) {
             </div>
             <div id="checkbox">
                 <form method="GET" name="Cart">
-                    <input class="checkbox" id="check" value="<?=$arr[$count][" price"]?>" type="checkbox" name="buy">
+                    <input class="checkbox" id="check" value="<?=$arr[$count]["price"]?>" type="checkbox" name="buy">
                 </form>
             </div>
         </div>
