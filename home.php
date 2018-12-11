@@ -21,7 +21,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
 
 <body>
     <header>
-        Made by Joy & Joseph
+       <span id = "makers"> Made by Joy & Joseph</span>
         <span id="head">
             <a href="account/account.php">My Account</a>
             /
@@ -132,6 +132,7 @@ while($count < count($arr)){
 														$counter++;
 													} ?>
                         </div>
+                        
                         <div id="details">
                             <h2 id="item_added" class="hidden">Item added!</h2>
                             <h3 class="h3modal"><i>Name:</i>
@@ -155,14 +156,12 @@ while($count < count($arr)){
                             </h3>
                             <!-- <form id="addCart"> -->
 
-
-                            <button value="<?=$arr[$count]['name']?>" id="addtocart" class="hello add_to_cart"><img
-                                    width="8%" src="images/cart.png"> Add to Cart</button>
-                            <!-- </form> -->
-
-
-                            <!-- <button id = "go_to_cart" class="hidden add_to_cart"><img width="8%" src="images/cart.png"> Go to Cart</button> -->
-
+                            <div id = "addCart">
+                                <button value="<?=$arr[$count]['name']?>" id="addtocart"  class="hello add_to_cart"><img
+                                        width="8%" src="images/cart.png"> Add to Cart</button>
+                                <!-- </form> -->
+                            
+                            </div>
                         </div>
                     </section>
                 </div>

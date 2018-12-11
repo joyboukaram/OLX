@@ -41,3 +41,4 @@ const search = document.querySelector("#search");
 searchpic.addEventListener("click", event => {
   search.style.border = "4px solid rgb(109, 44, 44)";
 })
+

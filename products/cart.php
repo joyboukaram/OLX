@@ -9,6 +9,7 @@ $price = 0;
     <title>My Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="product.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
     <script src="cart.js" defer></script>

@@ -4,6 +4,7 @@
     <title>My ads</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="ads.css">
+    <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="modal.css">
     <script src="ads.js" defer></script>
     <script src = "modal.js" defer></script>

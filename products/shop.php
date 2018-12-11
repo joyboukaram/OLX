@@ -11,9 +11,8 @@ session_start();
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="product.css">
     <meta charset="utf-8">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="shop.js" defer></script>
     <script src="modal.js" defer></script>
     <script src="product.js" defer></script>
@@ -22,7 +21,7 @@ session_start();
 
 <body>
     <header>
-        Made by Joy & Joseph
+        <span id = "makers">Made by Joy & Joseph</span>
         <span id="head">
             <a href="../account/account.php">My Account</a>
             /
@@ -42,14 +41,15 @@ session_start();
         </form>
 
         <button id="ad">+ Place an ad</button>
-
-        <div id="nav">
-            <a href="../home.php">Home</a>
-            <a href="shop.php">Shop</a>
-            <a href="../contact.php">Contact</a>
-            <form method="GET" action="../Signout.php">
-                <input id="submit_logout" type="submit" value="Logout">
-            </form>
+        <div>
+            <div id="nav">
+                <a href="../home.php">Home</a>
+                <a href="shop.php">Shop</a>
+                <a href="../contact.php">Contact</a>
+                <form method="GET" action="../Signout.php">
+                    <input id="submit_logout" type="submit" value="Logout">
+                </form>
+            </div>
         </div>
 
     </nav>
@@ -136,17 +136,17 @@ session_start();
 
         <div id="products">
 
-          <?php
+            <?php
           require("../connect.php");
   include 'getwomens.php';
   $count=0 ;
   while($count < count($arr)){
 
   ?>
-  <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-  <?php
+            <?php
   $count++;
   }
   ?>
@@ -160,17 +160,17 @@ session_start();
 
         <div id="products">
 
-          <?php
+            <?php
           require("../connect.php");
       include 'getmens.php';
       $count=0 ;
       while($count < count($arr)){
 
       ?>
-      <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-      <?php
+            <?php
       $count++;
       }
       ?>
@@ -184,17 +184,17 @@ session_start();
 
         <div id="products">
 
-          <?php
+            <?php
           require("../connect.php");
           include 'getelectronics.php';
           $count=0 ;
           while($count < count($arr)){
 
           ?>
-          <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-          <?php
+            <?php
           $count++;
           }
           ?>
@@ -207,17 +207,17 @@ session_start();
 
         <div id="products">
 
-          <?php
+            <?php
           require("../connect.php");
 include 'getaccessories.php';
 $count=0 ;
 while($count < count($arr)){
 
 ?>
- <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-<?php
+            <?php
 $count++;
 }
  ?>
@@ -231,17 +231,17 @@ $count++;
 
         <div id="products">
 
-          <?php
+            <?php
           require("../connect.php");
   include 'gethome.php';
   $count=0 ;
   while($count < count($arr)){
 
   ?>
-  <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-  <?php
+            <?php
   $count++;
   }
   ?>
@@ -257,17 +257,17 @@ $count++;
 
 
         <div id="products">
-          <?php
+            <?php
           require("../connect.php");
 include 'getgadgets.php';
 $count=0 ;
 while($count < count($arr)){
 
 ?>
- <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-<?php
+            <?php
 $count++;
 }
  ?>
@@ -279,17 +279,17 @@ $count++;
         <h2 class="cat_h2">Sports and Outdoors</h2>
 
         <div id="products">
-          <?php
+            <?php
           require("../connect.php");
 include 'getsports.php';
 $count=0 ;
 while($count < count($arr)){
 
 ?>
- <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-<?php
+            <?php
 $count++;
 }
  ?>
@@ -301,17 +301,17 @@ $count++;
         <h2 class="cat_h2">Makeup</h2>
 
         <div id="products">
-          <?php
+            <?php
           require("../connect.php");
 include 'getmakeups.php';
 $count=0 ;
 while($count < count($arr)){
 
 ?>
- <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-<?php
+            <?php
 $count++;
 }
  ?>
@@ -322,17 +322,17 @@ $count++;
     <div id="cars" class="hidden">
         <h2 class="cat_h2">Cars</h2>
         <div id="products">
-          <?php
+            <?php
           require("../connect.php");
           include 'getcars.php';
           $count=0 ;
           while($count < count($arr)){
 
           ?>
-          <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-          <?php
+            <?php
           $count++;
           }
           ?>
@@ -352,10 +352,10 @@ $count++;
   while($count < count($arr)){
 
   ?>
-   <img class="items new_image" src="<?=$arr[$count]['image']?>">
+            <img class="items new_image" src="<?=$arr[$count]['image']?>">
 
 
-  <?php
+            <?php
   $count++;
   }
    ?>
