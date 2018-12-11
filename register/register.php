@@ -24,6 +24,11 @@
         </select>
         <input class="input capital" type="text" placeholder="Address" name="address" required>
         <input id="dob" class="input" type="date" name="birthdate" required>
+        <div class="image-upload">
+            <input class="in" id="bla" type='file' name="files[]" multiple onchange="readURL(this);" accept="image/*"
+                required>
+            <br> <img class="in" id="blah" src="#" alt="your image" />
+        </div>
         <div id="submitBorder">
             <input id="submit" type="submit" value="Sign up">
         </div>
@@ -32,7 +37,7 @@
         <br> Log in <a href="../login/login.php">here</a></p>
 
     <a><input type="image" id="back" src="../images/back_button.png"></a>
-    <a id = "goToIndex" href = "../index.php">Go back to homepage</a>
+    <a id="goToIndex" href="../index.php">Go back to homepage</a>
 </body>
 
 
