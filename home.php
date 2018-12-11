@@ -41,7 +41,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
         </form>
 
         <button id="ad" href="">+ Place an ad</button>
-
+<div>
         <div id="nav">
             <a href="">Home</a>
             <a href="products/shop.php">Shop</a>
@@ -50,7 +50,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
                 <input id="submit_logout" type="submit" value="Logout">
             </form>
         </div>
-
+</div>
     </nav>
 
     <h1>Welcome <span id="name">
