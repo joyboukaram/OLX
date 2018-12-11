@@ -2,42 +2,82 @@
 require ("../connect.php");
 session_start();
 
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$errors = array();
+$uploadedFiles = array();
+$extension = array("jpeg","jpg","png","gif");
+$bytes = 1024;
+$KB = 1024;
+$totalBytes = $bytes * $KB;
+$UploadFolder = "uploads";
+$finallink= "";
 
-$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-if($check !== false) {
+$counter = 0;
 
-	$uploadOk = 1;
-} else {
-	echo "File is not an image.";
-	$uploadOk = 0;
+foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name){
+    $temp = $_FILES["files"]["tmp_name"][$key];
+    $name = $_FILES["files"]["name"][$key];
+
+    if(empty($temp))
+    {
+        break;
+    }
+
+    $counter++;
+    $UploadOk = true;
+
+    if($_FILES["files"]["size"][$key] > $totalBytes)
+    {
+        $UploadOk = false;
+        array_push($errors, $name." file size is larger than the 1 MB.");
+    }
+
+    $ext = pathinfo($name, PATHINFO_EXTENSION);
+    if(in_array($ext, $extension) == false){
+        $UploadOk = false;
+        array_push($errors, $name." is invalid file type.");
+    }
+
+    if(file_exists($UploadFolder."/".$name) == true){
+        $UploadOk = false;
+        array_push($errors, $name." file is already exist.");
+    }
+
+    if($UploadOk == true){
+        move_uploaded_file($temp,$UploadFolder."/".$name);
+        array_push($uploadedFiles, $name);
+    }
 }
 
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
+if($counter>0){
+    if(count($errors)>0)
+    {
+        echo "<b>Errors:</b>";
+        echo "<br/><ul>";
+        foreach($errors as $error)
+        {
+            echo "<li>".$error."</li>";
+        }
+        echo "</ul><br/>";
+    }
+
+    if(count($uploadedFiles)>0){
+        echo "<b>Uploaded Files:</b>";
+        echo "<br/><ul>";
+        foreach($uploadedFiles as $fileName)
+        {
+            echo "<li>".$fileName."</li>";
+						$finallink.= $UploadFolder."/".$fileName." ";
+
+        }
+        echo "</ul><br/>";
+
+        echo count($uploadedFiles)." file(s) are successfully uploaded.";
+    }
 }
-
-if ($_FILES["fileToUpload"]["size"] > 100000000000000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
+else{
+    echo "Please, Select file(s) to upload.";
 }
-
-if($imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-
-
-if ($uploadOk == 0) {
-echo "here";
-  }
-
+echo $finallink ;
 
 
   if (isset($_POST['name'])) {
@@ -72,12 +112,11 @@ echo "here";
 
 $email= $_SESSION["email"];
   $stmt = $mysqli->prepare("Insert INTO ads(name,price,description,location,categorie,image,seller) VALUES(?,?,?,?,?,?,?) ");
-  $stmt->bind_param("sssssss",$name,$price,$description,$location,$category,$target_file,$email);
+  $stmt->bind_param("sssssss",$name,$price,$description,$location,$category,$finallink,$email);
   $stmt->execute();
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        $_SESSION["done"] = true;
-				header("Location:../home.php");
-      }
+
+	$_SESSION["done"] = true;
+//	header("Location:../home.php");
 
 
 ?>

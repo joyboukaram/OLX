@@ -108,9 +108,13 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
 include 'products/getads.php';
 $count=0 ;
 while($count < count($arr)){
+		$images = explode(" " ,$arr[$count]['image']);
+		$countimage = count($images);
+	//	echo $countimage;
+
 
 ?>
-            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="products/<?=$arr[$count]['image']?>">
+            <img onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items" src="products/<?=$images[0]?>">
 
             <div id="<?=$arr[$count]['name']?>" class="modal">
 
@@ -119,8 +123,14 @@ while($count < count($arr)){
                     <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
                     <section id="modalbox">
                         <div id="images_grid">
-                            <img class="product_image" id="image1" src="products/<?=$arr[$count]['image']?>">
-                            <img class="product_image" id="image2" src="products/<?=$arr[$count]['image']?>">
+													<?php
+													$counter = 0;
+													while($counter < $countimage-1) {
+?>
+														<img class="product_image" src="products/<?=$images[$counter]?>">
+														<?php
+														$counter++;
+													} ?>
                         </div>
                         <div id="details">
                             <h2 id="item_added" class="hidden">Item added!</h2>

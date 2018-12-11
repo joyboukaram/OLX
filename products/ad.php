@@ -25,7 +25,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <div id="box">
 
         <div id="border">
-            <form method="POST" action="upload.php" novalidate="novalidate" enctype="multipart/form-data">
+            <form method="POST" action="upload.php" novalidate="novalidate" enctype="multipart/form-data" name="formUploadFile">
                 <input class="input" type="text" name="name" placeholder="item name" required>
                 <input class="input" type="number" name="price" value="1000" min="1000" step="0.25" class="currecy"
                     required>
@@ -45,7 +45,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
                 </select>
 
                 <div class="image-upload">
-                    <input class="in" id="bla" type='file' name="fileToUpload" multiple onchange="readURL(this);"
+                    <input class="in" id="bla" type='file' name="files[]" multiple onchange="readURL(this);"
                         accept="image/*" required>
                     <br> <img class="in" id="blah" src="#" alt="your image" />
 
