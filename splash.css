@@ -50,7 +50,7 @@ h1 {
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #3498db;
+    border-top-color: rgb(153, 184, 53);
 
     -webkit-animation: spin 2s linear infinite; 
     animation: spin 2s linear infinite;
@@ -67,7 +67,7 @@ h1 {
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #e74c3c;
+        border-top-color: rgb(88, 54, 119);
 
         -webkit-animation: spin 3s linear infinite; 
         animation: spin 3s linear infinite; 
@@ -82,7 +82,7 @@ h1 {
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #f9c922;
+        border-top-color: rgb(232, 101, 43);
 
         -webkit-animation: spin 1.5s linear infinite;
           animation: spin 1.5s linear infinite; 
