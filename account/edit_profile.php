@@ -28,8 +28,7 @@ while($count < count($arr)){
             <option class="gender" <?php if($arr[$count]["gender"]=="1" ) echo "selected" ?> value="1">Female</option>
         </select>
         <input class="input" type="email" placeholder="email" name="email" value='<?=$arr[$count]["email"]?>'>
-        <input class="input" type="text" placeholder="billing information/card number">
-        <input class="input" type="text" placeholder="security code">
+        
         <input class="input center" type="date" placeholder="expiry date">
         <input class="input" type="text" placeholder="shipping address" name="address" value='<?=$arr[$count]["address"]?>'>
         <p>Date of birth</p>

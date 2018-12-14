@@ -39,7 +39,7 @@ while($count < count($arr)){
                     <?=$arr[$count]["email"] ?>
                 </p>
                 <!-- <p><b>Password</b></p> -->
-                <p><b>Billing Information:</b><span class="capital"></span></p>
+                
                 <p><b>Shipping Address: </b><span class="capital">
                         <?=$arr[$count]["address"] ?></span></p>
 
