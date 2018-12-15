@@ -15,6 +15,20 @@ header a {
     text-decoration: none;
 }
 
+#delivery{
+    background-color: lightgreen;
+    border-radius: 15px;
+    padding: 1% 0%;
+    margin-top: 5%;
+    font-size: 16px;
+    float: right;
+    margin-right: 2%;
+    width: 15%;
+    border: 1px solid black;
+    margin-bottom: 2%;
+
+}
+
 #head {
     float: right;
 
@@ -270,6 +284,10 @@ div#nav a:hover {
     width: 15%;
     border: 1px solid black;
 }
+
+
+
+
 
 #images_grid {
     display: flex;

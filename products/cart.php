@@ -102,8 +102,13 @@ while ($count < count($arr)) {
                         <h3 class="h3modal"><i>Seller:</i>
                             <?=$arr[$count]['seller']?>
                         </h3>
+                        <div id="addCart">
+                                    <button value="<?=$arr[$count]['name']?>" id="delivery" class="hello deliveryToUser"><img
+                                            width="8%" src="../images/cart.png">Delivery</button>
                     </div>
+                    
                 </section>
+                
             </div>
         </div>
 

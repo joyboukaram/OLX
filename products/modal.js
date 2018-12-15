@@ -6,6 +6,9 @@ document.querySelectorAll(".add_to_cart").forEach(function(elem) {
 	});
 });;
 
+
+
+
 var b  = document.querySelectorAll(".hello");
 var prev = null;
 for (var i = 0; i < b.length; i++) {

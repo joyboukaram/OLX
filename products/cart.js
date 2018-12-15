@@ -9,6 +9,12 @@ const ad = document.querySelector("#ad");
 ad.addEventListener("click", event => {
 	window.open("../products/ad.php", "_self");
 });
+document.querySelectorAll(".deliveryToUser").forEach(function(elem) {
+	elem.addEventListener("click", function(event) {
+		elem.classList.add("hidden");
+		
+	});
+});;
 
 var rad = document.querySelectorAll('.checkbox');
 
