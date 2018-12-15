@@ -322,9 +322,9 @@ require "../connect.php";
                         </li>
                     </li>
                     <li>
-                        <a href="users.php">
+                        <a href="ads.php">
                             <i class="material-icons">layers</i>
-                            <span>Nurses</span>
+                            <span>Ads</span>
                         </a>
                     </li>
                    

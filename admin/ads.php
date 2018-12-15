@@ -505,10 +505,11 @@ require "../connect.php";
                                         <th>Price</th>
                                         <th>Description</th>
                                         <th>Location</th>
-                                        <th>Category</th>
+                                    <th>Category</th>
                                         <th>Image</th>
                                         <th>Seller</th>
                                         <th>Delivery</th>
+                                        <th>Status</th>
                                         
                                     </tr>
                                 </thead>
@@ -544,9 +545,11 @@ while ($count1 < $count) {
                                     <td>
                                         <?=$arr[$count1]["seller"]?>
                                     </td>
-                                  
                                     <td>
                                         <?=$arr[$count1]["delivery"]?>
+                                    </td>
+                                    <td>
+                                        <?=$arr[$count1]["status"]?>
                                     </td>
                                     
                                  
@@ -555,11 +558,6 @@ while ($count1 < $count) {
 $count1++;
 }
 ?>
-
-
-
-
-
                             </table>
                         </div>
                     </div>
@@ -576,11 +574,33 @@ $count1++;
     </div>
 </div>
             <!-- #END# Task Info -->
+            <div  id="delete" class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <h1>Change Status to Pending</h1>
+    <form method = "POST" action = "changestatuspending.php">
+        <input id="textname" type = "text" name = "username" placeholder = "name">
+        <input type= "submit" value="Submit">
+    </form>
+    </div>
 
         </div>
         </div>
+        
+        <div  id="delete" class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            
+                <h1>Change Status to Completed</h1>
+        <form method = "POST" action = "changestatus.php">
+            <input id="textname" type = "text" name = "username" placeholder = "name">
+            <input type= "submit" value="Submit">
+        </form>
+
+    </div>
+</div>
+    
     </section>
-   
+    
+
+</div>
+</div>
 
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
