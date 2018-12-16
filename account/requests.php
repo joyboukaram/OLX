@@ -47,6 +47,7 @@
 
     <div id="box">
         <p>NAME OF PRODUCT</p>
+        <p>PRICE</p>
         <form id = "formagree" method = "POST" action = "">
             <input class = "agreeDisagree" type = "submit" value = "Agree">
         </form>
