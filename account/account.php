@@ -45,7 +45,8 @@ while($count < count($arr)){
 
                 <a href="../products/my_ads.php">My ads</a>
                 <br><br>
-                <a href="confirm.php">Edit Profile</a>
+                <a href="confirm.php">Edit Profile</a><br><br>
+                <a href="requests.php">Requests</a>
             </div>
             <a><input type="image" id="back" src="../images/back_button.png"></a>
             <a id = "goToIndex" href = "../index.php">Go back to homepage</a>
