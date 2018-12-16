@@ -45,16 +45,30 @@
 
     <h1>Requests</h1>
 
+<?php
+session_start();
+ include 'getrequests.php';
+
+    $count=0 ;
+    while($count < count($arr)){
+    ?>
     <div id="box">
-        <p>NAME OF PRODUCT</p>
-        <p>PRICE</p>
-        <form id = "formagree" method = "POST" action = "">
+        <p><?=$arr[$count]["name"]?></p>
+        <p><?=$arr[$count]["price"]?></p>
+        <form id = "formagree" method = "POST" action = "agreerequest.php">
+          <input value="<?=$arr[$count]["name"]?>" name="name" type="hidden">
+          <input value="<?=$arr[$count]["price"]?>" name="price" type="hidden">
             <input class = "agreeDisagree" type = "submit" value = "Agree">
         </form>
-        <form method = "POST" action = "">
+        <form method = "POST" action = "deleterequest.php">
+          <input value="<?=$arr[$count]["name"]?>" name="name" type="hidden">
+          <input value="<?=$arr[$count]["price"]?>" name="price" type="hidden">
                 <input class = "agreeDisagree" type = "submit" value = "Disagree">
             </form>
     </div>
+    <?php
+  $count++;
+} ?>
 
 </body>
 

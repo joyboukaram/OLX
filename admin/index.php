@@ -1,6 +1,12 @@
 ﻿<?php
 
 require "../connect.php";
+session_start();
+if(!isset($_SESSION['logged_inadmin']) || $_SESSION['logged_inadmin'] != true)
+{
+	header("Location:login.php");
+}
+
 
 ?>
 
@@ -192,8 +198,8 @@ require "../connect.php";
                     <!-- #END# Notifications -->
                     <!-- Tasks -->
                     <li class="dropdown">
-                      
-                      
+
+
                         <ul class="dropdown-menu">
                             <li class="header">TASKS</li>
                             <li class="body">
@@ -271,7 +277,7 @@ require "../connect.php";
                         </ul>
                     </li>
                     <!-- #END# Tasks -->
-                   
+
                 </ul>
             </div>
         </div>
@@ -283,13 +289,13 @@ require "../connect.php";
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                   
+
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</div>
-                    
+
                     <div class="btn-group user-helper-dropdown">
-                    
+
                     </div>
                 </div>
             </div>
@@ -316,7 +322,7 @@ require "../connect.php";
                             <span>ads</span>
                         </a>
                     </li>
-                   
+
 
                     <li>
 
@@ -326,8 +332,8 @@ require "../connect.php";
 </a>
 
 </li>
-                    
-                
+
+
             </div>
             <!-- #Menu -->
             <!-- Footer -->
@@ -335,7 +341,7 @@ require "../connect.php";
                 <div class="copyright">
                 &copy; 2018 - 2019 <a href="http://www.instagram.com/joyboukaram">Joy</a> and <a href = "http://www.instagram.com/josephhannoun">Joseph</a>
                 </div>
-               
+
             </div>
             <!-- #Footer -->
         </aside>
@@ -502,7 +508,7 @@ require "../connect.php";
                                     <tr>
                                         <th>#</th>
                                         <th>Admin</th>
-                                       
+
                                     </tr>
                                 </thead>
                                 <?php include 'getadmins.php';
@@ -511,11 +517,11 @@ while ($count1 < $count) {
     ?>
                                 <tbody>
                                     <tr>
-                                        
+
                                         <td><?=$arr[$count1]["idadminusers"]?></td>
                                         <td><?=$arr[$count1]["name"]?></td>
-                                        
-                                    </tr>   
+
+                                    </tr>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -529,7 +535,7 @@ $count1++;
                 </div>
             </div>
             <div  id="delete" class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            
+
             <h1>Delete Admin</h1>
             <form method = "POST" action = "deleteadmins.php">
         <input id="textname" type = "text" name = "id" placeholder = "id">

@@ -1,7 +1,11 @@
 <?php
 
 require "../connect.php";
-
+session_start();
+if(!isset($_SESSION['logged_inadmin']) || $_SESSION['logged_inadmin'] != true)
+{
+	header("Location:login.php");
+}
 ?>
 
 <!DOCTYPE html>

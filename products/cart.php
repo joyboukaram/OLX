@@ -11,8 +11,7 @@ $price = 0;
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="product.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
-    <script src="cart.js" defer></script>
+     <script src="cart.js" defer></script>
 
 </head>
 
@@ -103,7 +102,7 @@ while ($count < count($arr)) {
                         <h3 class="h3modal"><i>Seller:</i>
                             <?=$arr[$count]['seller']?>
                         </h3>
-                        
+
                         <div id="addCart">
                                     <button value="<?=$arr[$count]['name']?>" id="delivery" class="hello deliveryToUser"><img
                                             width="8%" src="../images/cart.png">Delivery</button>
@@ -122,10 +121,12 @@ while ($count < count($arr)) {
                 <p><b>
                         <?=$arr[$count]["description"]?></b></p>
                 <p><b>
-             
+
                         <?=$arr[$count]["price"]?></b></p>
-                         
-                        <form method = "POST" action = "">
+
+                        <form method ="POST" action ="uploadrequest.php">
+                          <input type="hidden" value="<?=$arr[$count]["name"]?>" name="name">
+                          <input type="hidden" value="<?=$arr[$count]['seller']?>" name="seller">
                         Suggest a lower price: <input class = "uno" type = "number" name="lower_price" placeholder = "discount price">
                         <input class = "dos" type = "submit" value = "Submit">
                         </form>

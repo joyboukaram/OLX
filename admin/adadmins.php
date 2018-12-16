@@ -1,7 +1,11 @@
 <?php
 
 require "../connect.php";
-
+session_start();
+if(!isset($_SESSION['logged_inadmin']) || $_SESSION['logged_inadmin'] != true)
+{
+	header("Location:login.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -320,7 +324,7 @@ require "../connect.php";
                     <li>
 
 
-                    <a href="">
+                    <a href="ads.php">
                         <i class="material-icons">layers</i>
                         <span>Ads</span>
                         </a>
@@ -506,9 +510,9 @@ require "../connect.php";
                     <div class="header">
                         <h2>Add Admin</h2>
 
-    <form method = "POST" action = "">
+    <form method = "POST" action = "adadmin.php">
         <input class="postinput" type = "text" name = "name" placeholder = "name"><br>
-        <input class="postinput"  type = "text" name = "usernmae" placeholder = "username"><br>
+        <input class="postinput"  type = "text" name = "username" placeholder = "username"><br>
         <input class="postinput" type = "password" name = "password" placeholder = "password"><br>
         <input class="postinput" id = "button"  type = "submit" name = "Submit">
     </form>
@@ -518,9 +522,9 @@ require "../connect.php";
                     <div class="body">
                         <div class="table-responsive">
                             <table class="table table-hover dashboard-task-infos">
-                              
 
-                               
+
+
 
     </section>
 

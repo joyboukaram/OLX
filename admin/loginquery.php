@@ -11,7 +11,7 @@ if (isset($_POST['name'])) {
 
 if (isset($_POST['password'])) {
     $password = $mysqli->real_escape_string($_POST['password']);
-    // $password = hash('sha256', $password);
+    $password = hash('sha256', $password);
 } else {
     die("error2");
 }
@@ -25,10 +25,10 @@ $count = $stmt->num_rows;
 $stmt->fetch();
 
 if ($count != 0) {
-    $_SESSION["logged_in"] = true;
+    $_SESSION["logged_inadmin"] = true;
     $_SESSION["id"] = $id;
     header("Location:index.php");
 } else {
-    $_SESSION["credentials"] = false;
+    $_SESSION["logged_indadmin"] = false;
    header("Location:wrong.php");
 }
