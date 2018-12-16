@@ -35,10 +35,13 @@ session_start();
     <nav>
         <a href="../home.php"><img id="logo" src="../images/olx.png" /></a>
 
-        <form method="GET" action="search.php">
+        
+          <form method="POST" action="../search.php">
             <input id="search" name="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
+
+        
 
         <button id="ad">+ Place an ad</button>
         <div>

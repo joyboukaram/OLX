@@ -28,10 +28,11 @@
     <nav>
         <a href="../home.php"><img id="logo" src="../images/olx.png" /></a>
 
-        <form method="GET" action="search/search.php">
-            <input id="search" type="text" placeholder="Search for your item...">
+        <form method="POST" action="../search.php">
+            <input id="search" name="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
+
 
         <button id="ad" href="">+ Place an ad</button>
         <div>

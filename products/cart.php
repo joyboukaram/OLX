@@ -33,10 +33,11 @@ $price = 0;
     <nav>
         <a href="../home.php"><img id="logo" src="../images/olx.png" /></a>
 
-        <form method="GET" action="search/search.php">
-            <input id="search" type="text" placeholder="Search for your item...">
+        <form method="POST" action="../search.php">
+            <input id="search" name="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
+
 
         <button id="ad" href="">+ Place an ad</button>
         <div>
@@ -102,6 +103,7 @@ while ($count < count($arr)) {
                         <h3 class="h3modal"><i>Seller:</i>
                             <?=$arr[$count]['seller']?>
                         </h3>
+                        
                         <div id="addCart">
                                     <button value="<?=$arr[$count]['name']?>" id="delivery" class="hello deliveryToUser"><img
                                             width="8%" src="../images/cart.png">Delivery</button>
@@ -120,7 +122,13 @@ while ($count < count($arr)) {
                 <p><b>
                         <?=$arr[$count]["description"]?></b></p>
                 <p><b>
+             
                         <?=$arr[$count]["price"]?></b></p>
+                         
+                        <form method = "POST" action = "">
+                        Suggest a lower price: <input class = "uno" type = "number" name="lower_price" placeholder = "discount price">
+                        <input class = "dos" type = "submit" value = "Submit">
+                        </form>
             </div>
             <div id="checkbox">
                 <form method="GET" name="Cart">

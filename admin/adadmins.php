@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require "../connect.php";
 
@@ -11,11 +11,15 @@ require "../connect.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Admin</title>
+    <title>
+       Ads
+    </title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel= "stylesheet" href = "adadmins.css">
 
     <!-- Google Fonts -->
+    <script src = "ads.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
@@ -86,7 +90,7 @@ require "../connect.php";
                     <!-- #END# Call Search -->
                     <!-- Notifications -->
                     <li class="dropdown">
-                    <li class=""><a href="logout.php">Logout</a></li>
+
                         <ul class="dropdown-menu">
                             <li class="header">NOTIFICATIONS</li>
                             <li class="body">
@@ -192,8 +196,8 @@ require "../connect.php";
                     <!-- #END# Notifications -->
                     <!-- Tasks -->
                     <li class="dropdown">
-                      
-                      
+                    <li class=""><a href="logout.php">Logout</a></li>
+                        </a>
                         <ul class="dropdown-menu">
                             <li class="header">TASKS</li>
                             <li class="body">
@@ -271,7 +275,7 @@ require "../connect.php";
                         </ul>
                     </li>
                     <!-- #END# Tasks -->
-                   
+
                 </ul>
             </div>
         </div>
@@ -283,14 +287,15 @@ require "../connect.php";
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                   
+
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</div>
-                    
-                    <div class="btn-group user-helper-dropdown">
-                    
-                    </div>
+
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Welcome
+                                    </div>
+
+
                 </div>
             </div>
             <!-- #User Info -->
@@ -298,36 +303,42 @@ require "../connect.php";
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li class="active">
-                        <a href="index.php">
-                            <i class="material-icons">home</i>
-                            <span>Admins</span>
-                        </a>
-                    </li>
+
+                    <a href="index.php">
+                        <i class="material-icons">home</i>
+                        <span>Admins</span>
+                    </a>
+
                     <li>
+
                         <a href="users.php">
                             <i class="material-icons">text_fields</i>
                             <span>Users</span>
                         </a>
+
                     </li>
                     <li>
-                        <a href="ads.php">
-                            <i class="material-icons">layers</i>
-                            <span>ads</span>
+
+
+                    <a href="">
+                        <i class="material-icons">layers</i>
+                        <span>Ads</span>
                         </a>
                     </li>
-                   
+                    </li>
 
-                    <li>
 
+                    <li class="active">
 <a href="adadmins.php">
     <i class="material-icons">text_fields</i>
     <span>Add an Admin</span>
 </a>
 
+<li>
 </li>
-                    
-                
+
+
+
             </div>
             <!-- #Menu -->
             <!-- Footer -->
@@ -335,7 +346,7 @@ require "../connect.php";
                 <div class="copyright">
                 &copy; 2018 - 2019 <a href="http://www.instagram.com/joyboukaram">Joy</a> and <a href = "http://www.instagram.com/josephhannoun">Joseph</a>
                 </div>
-               
+
             </div>
             <!-- #Footer -->
         </aside>
@@ -490,59 +501,32 @@ require "../connect.php";
 
         <div class="row clearfix">
             <!-- Task Info -->
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="header">
-                        <h2>TASK INFOS</h2>
+                        <h2>Add Admin</h2>
+
+    <form method = "POST" action = "">
+        <input class="postinput" type = "text" name = "name" placeholder = "name"><br>
+        <input class="postinput"  type = "text" name = "usernmae" placeholder = "username"><br>
+        <input class="postinput" type = "password" name = "password" placeholder = "password"><br>
+        <input class="postinput" id = "button"  type = "submit" name = "Submit">
+    </form>
+
+
                     </div>
                     <div class="body">
                         <div class="table-responsive">
                             <table class="table table-hover dashboard-task-infos">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Admin</th>
-                                       
-                                    </tr>
-                                </thead>
-                                <?php include 'getadmins.php';
-$count1 = 0;
-while ($count1 < $count) {
-    ?>
-                                <tbody>
-                                    <tr>
-                                        
-                                        <td><?=$arr[$count1]["idadminusers"]?></td>
-                                        <td><?=$arr[$count1]["name"]?></td>
-                                        
-                                    </tr>   
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <?php
-$count1++;
-}
-?>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div  id="delete" class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            
-            <h1>Delete Admin</h1>
-            <form method = "POST" action = "deleteadmins.php">
-        <input id="textname" type = "text" name = "id" placeholder = "id">
-        <input type= "submit" value="Submit">
-    </form>
+                              
 
-</div>
-</div>
-            <!-- #END# Task Info -->
+                               
 
-        </div>
-        </div>
     </section>
+
+
+</div>
+</div>
 
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>

@@ -328,6 +328,15 @@ require "../connect.php";
                         </a>
                     </li>
 
+                    <li>
+
+<a href="adadmins.php">
+    <i class="material-icons">text_fields</i>
+    <span>Add an Admin</span>
+</a>
+
+</li>
+
 
 
             </div>
