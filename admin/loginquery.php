@@ -11,7 +11,7 @@ if (isset($_POST['name'])) {
 
 if (isset($_POST['password'])) {
     $password = $mysqli->real_escape_string($_POST['password']);
-
+    $password = hash('sha256', $password);
 } else {
     die("error2");
 }
@@ -27,8 +27,8 @@ $stmt->fetch();
 if ($count != 0) {
     $_SESSION["logged_in"] = true;
     $_SESSION["id"] = $id;
-    header("Location: index.php");
+    header("Location:index.php");
 } else {
     $_SESSION["credentials"] = false;
-    header("Location: wrong.php");
+   header("Location:wrong.php");
 }

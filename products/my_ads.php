@@ -53,9 +53,14 @@
 include 'getmyads.php';
 $count=0 ;
 while($count < count($arr)){
+
+
+  $images = explode(" " ,$arr[$count]['image']);
+  $countimage = count($images);
+
 ?>
         <img class="myads" onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display='block'" class="items"
-            src="<?=$arr[$count]['image']?>">
+            src="<?=$images[0]?>">
 
         <div id="<?=$arr[$count]['name']?>" class="modal">
 
@@ -64,11 +69,19 @@ while($count < count($arr)){
                 <span onclick="document.getElementById('<?=$arr[$count]['name']?>').style.display = 'none' " class="close">&times;</span>
                 <section id="modalbox">
                     <div id="images_grid">
-                        <img class="product_image" id="image1" src="<?=$arr[$count]['image']?>">
-                        <img class="product_image" id="image2" src="<?=$arr[$count]['image']?>">
+
+
+                      <?php
+                      $counter = 0;
+                      while($counter < $countimage-1) {
+                    ?>
+                        <img class="product_image" id="image1" src="<?=$images[$counter]?>">
+                        <?php
+                        $counter++;
+                      } ?>
                     </div>
                     <div id="details">
-                    
+
 
                         <h3 class="h3modal"><i>Name:</i>
                             <?=$arr[$count]['name']?>
@@ -91,15 +104,15 @@ while($count < count($arr)){
                         </h3>
 
                         <div id="editCart">
-                        <form action = "editMyAd.php" method = "POST">
-                            <button value="<?=$arr[$count]['name']?>" id="editAdd" class="hello adds"><img width="8%"
+                        <form action="SetAdToEdit.php" method="POST">
+                            <button value="<?=$arr[$count]['idads']?>" name="id" id="editAdd" class="hello adds"><img width="8%"
                                     src="../images/cart.png">Edit Add</button>
 </form>
                         </div>
 
                         <div id="deleteCart">
                             <form action = "deleteMyAd.php" method = "POST">
-                        <button value="<?=$arr[$count]['name']?>" id="deleteAdd" class=" adds"><img width="8%"
+                        <button value="<?=$arr[$count]['idads']?>" name= "id" id="deleteAdd" class=" adds"><img width="8%"
                                     src="../images/cart.png">Delete Add</button>
 </form>
                         </div>

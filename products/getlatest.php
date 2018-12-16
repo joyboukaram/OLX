@@ -17,7 +17,7 @@ $email = $_SESSION["email"];
 
 
     $arr = [];
-    $stmt = $mysqli->prepare("SELECT * FROM ads");
+    $stmt = $mysqli->prepare("SELECT * FROM ads where approved=1");
     $stmt->execute();
     $result = $stmt->get_result();
     while($row = $result->fetch_assoc()) {

@@ -106,9 +106,9 @@ while ($count < count($arr)) {
                                     <button value="<?=$arr[$count]['name']?>" id="delivery" class="hello deliveryToUser"><img
                                             width="8%" src="../images/cart.png">Delivery</button>
                     </div>
-                    
+
                 </section>
-                
+
             </div>
         </div>
 

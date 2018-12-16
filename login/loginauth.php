@@ -18,11 +18,11 @@ if (isset($_POST['password'])) {
 }
 
 
-$stmt = $mysqli->prepare("Select firstName , lastName, cart From users WHERE email = ? AND password = ? ");
+$stmt = $mysqli->prepare("Select firstName , lastName, cart , delivery From users WHERE email = ? AND password = ? ");
 $stmt->bind_param("ss", $email, $pass);
 $stmt->execute();
 $stmt->store_result();
-$stmt->bind_result($first_name , $last_name , $cart);
+$stmt->bind_result($first_name , $last_name , $cart , $delivery);
 $count = $stmt->num_rows;
 $stmt->fetch();
 
@@ -36,6 +36,8 @@ if($count == 0){
   $_SESSION["last_name"] = $last_name;
   $_SESSION["email"] = $email;
   $_SESSION["cart"] = $cart;
+  $_SESSION["delivery"] = $delivery;
+
 
   $_SESSION["price"]= 0;
 

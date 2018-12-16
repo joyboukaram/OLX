@@ -19,17 +19,17 @@ foreach($items as $item){
   $arr = [];
   if(isset($_SESSION['price']) && $_SESSION['price'] == "low" )
   {
-  $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' order by price");
+  $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' AND approved=1 order by price");
 } else if(isset($_SESSION['price']) && $_SESSION['price'] == "high" ){
-  $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' order by price desc");
+  $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' AND approved=1 order by price desc");
 }
   else if(isset($_SESSION['date']) && $_SESSION['date'] == "old" ){
-    $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' order by idads");
+    $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' AND approved=1 order by idads");
   }  else if(isset($_SESSION['date']) && $_SESSION['date'] == "new" ){
-      $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' order by idads desc");
+      $stmt = $mysqli->prepare("SELECT * FROM ads where categorie='home' AND approved=1 order by idads desc");
     }
 else{
-  $stmt = $mysqli->prepare("SELECT * FROM ads where categorie= 'home'");
+  $stmt = $mysqli->prepare("SELECT * FROM ads where categorie= 'home' AND approved=1");
 }
   $stmt->execute();
   $result = $stmt->get_result();

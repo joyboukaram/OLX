@@ -274,7 +274,7 @@ require "../connect.php";
                         </ul>
                     </li>
                     <!-- #END# Tasks -->
-                    
+
                 </ul>
             </div>
         </div>
@@ -286,15 +286,15 @@ require "../connect.php";
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    
+
                 </div>
                 <div class="info-container">
-                
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Welcome
                                     </div>
-                  
-                  
+
+
                 </div>
             </div>
             <!-- #User Info -->
@@ -317,7 +317,7 @@ require "../connect.php";
 
                     </li>
                     <li>
-                        
+
                     <li class="active">
                     <a href="">
                         <i class="material-icons">layers</i>
@@ -335,7 +335,7 @@ require "../connect.php";
                 <div class="copyright">
                 &copy; 2018 - 2019 <a href="http://www.instagram.com/joyboukaram">Joy</a> and <a href = "http://www.instagram.com/josephhannoun">Joseph</a>
                 </div>
-                
+
             </div>
             <!-- #Footer -->
         </aside>
@@ -510,7 +510,9 @@ require "../connect.php";
                                         <th>Seller</th>
                                         <th>Delivery</th>
                                         <th>Status</th>
-                                        
+                                        <th>Approved</th>
+
+
                                     </tr>
                                 </thead>
 
@@ -520,7 +522,7 @@ while ($count1 < $count) {
     ?>
                                 <tbody>
 
-                                
+
                                     <td>
                                         <?=$count1+1?>
                                     </td>
@@ -549,10 +551,14 @@ while ($count1 < $count) {
                                         <?=$arr[$count1]["delivery"]?>
                                     </td>
                                     <td>
-                                        <?=$arr[$count1]["status"]?>
+                                      <?php if($arr[$count1]["status"]==0) echo "Pending"; else echo "Complete";?>
                                     </td>
-                                    
-                                 
+                                    <td>
+                                        <?php if($arr[$count1]["approved"]==0) echo "Not approved"; else echo "Approved";?>
+                                    </td>
+
+
+
                                 </tbody>
                                 <?php
 $count1++;
@@ -562,9 +568,9 @@ $count1++;
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <div  id="delete" class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            
+
                 <h1>Delete Ads</h1>
         <form method = "POST" action = "deleteads.php">
             <input id="textname" type = "text" name = "username" placeholder = "name">
@@ -584,9 +590,9 @@ $count1++;
 
         </div>
         </div>
-        
+
         <div  id="delete" class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-            
+
                 <h1>Change Status to Completed</h1>
         <form method = "POST" action = "changestatus.php">
             <input id="textname" type = "text" name = "username" placeholder = "name">
@@ -594,10 +600,30 @@ $count1++;
         </form>
 
     </div>
+    <div  id="delete" class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+
+            <h1>Change To Approved</h1>
+    <form method = "POST" action = "changeapproved.php">
+        <input id="textname" type = "text" name = "username" placeholder = "name">
+        <input type= "submit" value="Submit">
+    </form>
+
 </div>
-    
+
+
+<div  id="delete" class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+
+        <h1>Change To Not Approved</h1>
+<form method = "POST" action = "changenotapproved.php">
+    <input id="textname" type = "text" name = "username" placeholder = "name">
+    <input type= "submit" value="Submit">
+</form>
+
+</div>
+</div>
+
     </section>
-    
+
 
 </div>
 </div>

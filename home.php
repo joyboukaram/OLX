@@ -35,8 +35,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
     <nav>
         <a href="home.php"><img id="logo" src="images/olx.png" /></a>
 
-        <form method="GET" action="search/search.php">
-            <input id="search" type="text" placeholder="Search for your item...">
+        <form method="POST" action="search.php">
+            <input id="search" name="search" type="text" placeholder="Search for your item...">
             <input id="submit" type="submit" value="Search">
         </form>
 
@@ -132,9 +132,9 @@ while($count < count($arr)){
 														$counter++;
 													} ?>
                         </div>
-                        
+
                         <div id="details">
-                            
+
                             <h3 class="h3modal"><i>Name:</i>
                                 <?=$arr[$count]['name']?>
                             </h3>
@@ -160,7 +160,7 @@ while($count < count($arr)){
                                 <button value="<?=$arr[$count]['name']?>" id="addtocart"  class="hello add_to_cart"><img
                                         width="8%" src="images/cart.png"> Add to Cart</button>
                                 <!-- </form> -->
-                            
+
                             </div>
                         </div>
                     </section>

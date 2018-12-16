@@ -192,8 +192,8 @@ require "../connect.php";
                     <!-- #END# Notifications -->
                     <!-- Tasks -->
                     <li class="dropdown">
-                        
-                       
+
+
                         <ul class="dropdown-menu">
                             <li class="header">TASKS</li>
                             <li class="body">
@@ -271,7 +271,7 @@ require "../connect.php";
                         </ul>
                     </li>
                     <!-- #END# Tasks -->
-                    
+
                 </ul>
             </div>
         </div>
@@ -283,11 +283,11 @@ require "../connect.php";
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    
+
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</div>
-                    
+
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
@@ -307,12 +307,12 @@ require "../connect.php";
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    
+
                         <a href="index.php">
                             <i class="material-icons">home</i>
                             <span>Admins</span>
                         </a>
-                    
+
                     <li>
                     <li class="active">
                         <a href="">
@@ -327,9 +327,9 @@ require "../connect.php";
                             <span>Ads</span>
                         </a>
                     </li>
-                   
-                    
-                
+
+
+
             </div>
             <!-- #Menu -->
             <!-- Footer -->
@@ -337,7 +337,7 @@ require "../connect.php";
                 <div class="copyright">
                 &copy; 2018 - 2019 <a href="http://www.instagram.com/joyboukaram">Joy</a> and <a href = "http://www.instagram.com/josephhannoun">Joseph</a>
                 </div>
-               
+
             </div>
             <!-- #Footer -->
         </aside>
@@ -510,7 +510,9 @@ require "../connect.php";
                                         <th>Address</th>
                                         <th>Birthdate</th>
                                         <th>Cart</th>
-                                       
+                                        <th>Image</th>
+
+
                                     </tr>
                                 </thead>
                                 <?php include 'getusers.php';
@@ -518,8 +520,8 @@ $count1 = 0;
 while ($count1 < $count) {
     ?>
                                 <tbody>
-                                    
-                                        
+
+
                                         <td><?=$count1+1?></td>
                                         <td><?=$arr[$count1]["firstName"]?></td>
                                         <td><?=$arr[$count1]["lastName"]?></td>
@@ -529,8 +531,8 @@ while ($count1 < $count) {
                                         <td><?=$arr[$count1]["birthdate"]?></td>
                                         <td><?=$arr[$count1]["cart"]?></td>
                                         <td><?=$arr[$count1]["image"]?></td>
-                                        
-                                    </tr>   
+
+                                    </tr>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -545,7 +547,7 @@ $count1++;
             </div>
 
             <div  id="delete" class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-            
+
             <h1>Delete User</h1>
     <form method = "POST" action = "deleteusers.php">
         <input id="textname" type = "text" name = "email" placeholder = "email">

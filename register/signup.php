@@ -150,6 +150,8 @@ if($count != 0){
 	$_SESSION["firt_name"] = $first_name;
   $_SESSION["last_name"] = $last_name;
   $_SESSION["cart"] = null;
+  $_SESSION["delivery"] = null;
+
 
 
   $_SESSION["email"] = $email;
