@@ -81,7 +81,7 @@ if(!isset($_SESSION['logged_inadmin']) || $_SESSION['logged_inadmin'] != true)
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
                     aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">ADMIN</a>
+                <a class="navbar-brand" href="index.php">ADMIN</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -292,18 +292,7 @@ if(!isset($_SESSION['logged_inadmin']) || $_SESSION['logged_inadmin'] != true)
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</div>
 
-                    <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
             <!-- #User Info -->
@@ -523,6 +512,7 @@ if(!isset($_SESSION['logged_inadmin']) || $_SESSION['logged_inadmin'] != true)
                                         <th>Address</th>
                                         <th>Birthdate</th>
                                         <th>Cart</th>
+																				<th>Delivery</th>
                                         <th>Image</th>
 
 
@@ -543,6 +533,7 @@ while ($count1 < $count) {
                                         <td><?=$arr[$count1]["address"]?></td>
                                         <td><?=$arr[$count1]["birthdate"]?></td>
                                         <td><?=$arr[$count1]["cart"]?></td>
+																				<td><?=$arr[$count1]["delivery"]?></td>
                                         <td><?=$arr[$count1]["image"]?></td>
 
                                     </tr>

@@ -16,22 +16,25 @@ function readURL(input) {
 }
 
 var hide_contact = document.querySelector("#hide_contact");
+var hide_contact2 = document.querySelector("#hide_contact2");
 
 $('select').on('change', function () {
-    
+
 
     switch (this.value) {
         case 'services':
             hide_contact.classList.add("hidden");
+            hide_contact2.classList.add("hidden");
             console.log("ok");
             break;
-            
+
 
         default:
         console.log("no");
         hide_contact.classList.remove("hidden");
+        hide_contact2.classList.remove("hidden");
             break;
     }
 
-    
+
 });

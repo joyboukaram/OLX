@@ -50,9 +50,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
                     <input class="in" id="bla" type='file' name="files[]" multiple onchange="readURL(this);" accept="image/*"
                         required>
                     <br> <img class="in" id="blah" src="#" alt="your image" /><br><br>
-                    <span id = "hide_contact">Yes
+                    <h2>Hide contact details?</h2> <span id = "hide_contact">Yes
 											<input type = "radio" id="checkhide" name = "hidecontact" value="1"> </span>
-										<span id = "hide_contact">No
+										<span id = "hide_contact2">No
 											<input type = "radio" id="checkhide" name = "hidecontact" value="0"> </span>
 
                     <div id="submitBorder">

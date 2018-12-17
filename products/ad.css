@@ -7,8 +7,8 @@ body {
     margin-left: 10%;
 }
 
-#hide_contact{
-    font-size: 25px;
+#hide_contact, #hide_contact2{
+    font-size: 20px;
 }
 
 input#checkhide{
@@ -16,7 +16,7 @@ input#checkhide{
     height: 25px;
     margin-left: 5%;
     margin-top: 1%;
-   
+
 }
 
 .hidden{

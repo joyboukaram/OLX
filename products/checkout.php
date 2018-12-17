@@ -16,7 +16,7 @@ if($delivery==null){
 else{
   $delivery.=$_SESSION["checked"];
 }
-
+echo $delivery;
 $items =explode(" ",$cart);
 $items1 =explode(" ",$delivery);
 
