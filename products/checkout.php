@@ -22,26 +22,40 @@ $items1 =explode(" ",$delivery);
 
 $newcart=null;
 for ($x = 0; $x < count($items); $x++) {
-  for($i =0 ; $i <count($items1) ; $i++){
+  if(check($items1 , $items[$x])==true){
 
-  if($items[$x] != $items1[$i]){
-    $newcart.= " " .$items[$x];
+
+    $newcart.= $items[$x]. " ";
+  }
   }
 
-  $stmt = $mysqli->prepare("Update ads set delivery = 1  where name = ?");
-  $stmt->bind_param("s",$items1[$i]);
-  $stmt->execute();
+  function check ($delivery , $name){
+    foreach ($delivery as $item){
+      if ($item == $name){
+        return false;
+      }
+
+    }
+  return true;
+
   }
 
-}
+  for ($x = 0; $x < count($items1); $x++) {
 
-echo ("hre");
+
+    $stmt = $mysqli->prepare("Update ads set delivery = 1  where name = ?");
+    $stmt->bind_param("s",$items1[$x]);
+    $stmt->execute();
+
+    }
+
+
+
 $_SESSION["cart"]= $newcart;
 $stmt = $mysqli->prepare("Update users set delivery = ? , cart=? where email = ?");
 $stmt->bind_param("sss",$delivery ,$newcart,  $email);
 $stmt->execute();
 
-echo ("hre");
 
 $_SESSION["checked"]=null;
 

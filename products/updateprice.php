@@ -10,7 +10,7 @@ if (isset($_POST['result'])) {
 
 $items =explode(" ",$result);
   $_SESSION["price"] += $items[0];
-  $_SESSION["checked"] .= $items[1];
+  $_SESSION["checked"] .=" ". $items[1];
 
 
   echo $_SESSION["price"] ;
