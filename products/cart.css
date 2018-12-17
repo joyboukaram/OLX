@@ -35,6 +35,18 @@ header a {
     
 }
 
+#checkout{
+    background-color: lightgreen;
+    border-radius: 15px;
+    padding: 1% 0%;
+    margin-top: 2%;
+    font-size: 16px;
+    float: right;
+    margin-right: 10%;
+    width: 15%;
+    border: 1px solid black;
+    margin-bottom: 2%;
+}
 
 form{
     margin-left: 2%;
@@ -338,12 +350,26 @@ footer {
 
 
 @media (max-width: 1100px) {
+
+    
     #ad {
         font-size: 13px;
     }
 }
 
 @media (max-width: 800px) {
+    #checkout{
+        padding: 2%;
+        margin: 0;
+        width: 100%;
+    }
+
+    .dos{
+        padding: 2%;
+        margin-top: 4%;
+        margin-left: 2%;
+    }
+
     #ad {
         text-align: center;
         padding: 1% 2%;

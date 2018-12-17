@@ -11,6 +11,7 @@ $price = 0;
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="product.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="cart.js" defer></script>
 
 </head>
@@ -89,8 +90,8 @@ while ($count < count($arr)) {
                         <h3 class="h3modal"><i>Price:</i>
                             <?=$arr[$count]['price']?>
                         </h3>
-                        <h3 class="h3modal"><i>Category</i>
-                            <?=$arr[$count]['categorie']?>
+                        <h3 id = "category" class="h3modal"> <i>Category</i>
+                       <span class ="cat" name="<?=$arr[$count]['categorie']?>"><?=$arr[$count]['categorie']?></span>
                         </h3>
                         <h3 class="h3modal"><i>Location:</i>
                             <?=$arr[$count]['location']?>
@@ -99,7 +100,7 @@ while ($count < count($arr)) {
                         <ul>
                             <?=$arr[$count]['description']?>
                         </ul>
-                        <h3 class="h3modal"><i>Seller:</i>
+                        <h3 id = "contact_details" class="h3modal"><i>Seller:</i>
                             <?=$arr[$count]['seller']?>
                         </h3>
 
@@ -122,7 +123,7 @@ while ($count < count($arr)) {
                         <?=$arr[$count]["description"]?></b></p>
                 <p><b>
 
-                        <?=$arr[$count]["price"]?></b></p>
+                        <?=$arr[$count]["price"]?> LBP</b></p>
 
                         <form method ="POST" action ="uploadrequest.php">
                           <input type="hidden" value="<?=$arr[$count]["name"]?>" name="name">
@@ -146,6 +147,10 @@ $count++;
         <p><b>Total</b></p>
         <p id="price"></p>
     </div>
+
+    <form method = "POST" action ="">
+        <input id = "checkout" type = "submit" value = "Checkout">
+    </form>
 
 </body>
 

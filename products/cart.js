@@ -9,8 +9,8 @@ const ad = document.querySelector("#ad");
 ad.addEventListener("click", event => {
 	window.open("../products/ad.php", "_self");
 });
-document.querySelectorAll(".deliveryToUser").forEach(function(elem) {
-	elem.addEventListener("click", function(event) {
+document.querySelectorAll(".deliveryToUser").forEach(function (elem) {
+	elem.addEventListener("click", function (event) {
 		elem.classList.add("hidden");
 
 	});
@@ -37,6 +37,7 @@ function showTotal(event) {
 		success: function (data) {
 
 			total_price.textContent = data + "LBP";
+			console.log("hey");
 
 		}
 	})
@@ -44,7 +45,7 @@ function showTotal(event) {
 }
 
 
-var b  = document.querySelectorAll(".hello");
+var b = document.querySelectorAll(".hello");
 var prev = null;
 for (var i = 0; i < b.length; i++) {
 	b[i].onclick = function () {

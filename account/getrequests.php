@@ -13,7 +13,7 @@ while($row = $result->fetch_assoc()) {
   $arr[] = $row;
   $count++;
 }
-if(!$arr) echo('No rows');
+if(!$arr) echo('');
 $stmt->close();
 
 ?>

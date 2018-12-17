@@ -44,11 +44,13 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true)
                     <option value="services">Services</option>
                 </select>
 
+                
+
                 <div class="image-upload">
                     <input class="in" id="bla" type='file' name="files[]" multiple onchange="readURL(this);" accept="image/*"
                         required>
-                    <br> <img class="in" id="blah" src="#" alt="your image" />
-
+                    <br> <img class="in" id="blah" src="#" alt="your image" /><br><br>
+                    <span id = "hide_contact">Hide contact?<input type = "checkbox" id="checkhide" name = "hidecontact"> </span>
                     <div id="submitBorder">
                         <input id="submit" type="submit" value="Submit">
                     </div>

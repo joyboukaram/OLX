@@ -13,7 +13,7 @@
     <header>
         <span id="makers"> Made by Joy & Joseph</span>
         <span id="head">
-            <a href="account/account.php">My Account</a>
+            <a href="account.php">My Account</a>
             /
             <img class="icons" src="../images/shopping_cart.png" id="cart">
             /
@@ -33,7 +33,7 @@
         <button id="ad" href="">+ Place an ad</button>
         <div>
             <div id="nav">
-                <a href="">Home</a>
+                <a href="../home.php">Home</a>
                 <a href="../products/shop.php">Shop</a>
                 <a href="../contact.php" id="contact">Contact</a>
                 <form method="GET" action="../Signout.php">

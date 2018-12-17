@@ -7,6 +7,22 @@ body {
     margin-left: 10%;
 }
 
+#hide_contact{
+    font-size: 25px;
+}
+
+input#checkhide{
+    width: 30px;
+    height: 25px;
+    margin-left: 5%;
+    margin-top: 1%;
+   
+}
+
+.hidden{
+    display: none;
+}
+
 h1 {
     padding-top: 2%;
     padding-bottom: 2%;

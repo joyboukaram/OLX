@@ -14,3 +14,24 @@ function readURL(input) {
         }
     }
 }
+
+var hide_contact = document.querySelector("#hide_contact");
+
+$('select').on('change', function () {
+    
+
+    switch (this.value) {
+        case 'services':
+            hide_contact.classList.add("hidden");
+            console.log("ok");
+            break;
+            
+
+        default:
+        console.log("no");
+        hide_contact.classList.remove("hidden");
+            break;
+    }
+
+    
+});
