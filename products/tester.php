@@ -1,7 +1,6 @@
 <?php
 
 require ("../connect.php");
-session_start();
 
 if (isset($_POST['result'])) {
     $result = $mysqli->real_escape_string($_POST['result']);
@@ -19,7 +18,14 @@ if (isset($_POST['result'])) {
 //   else{
 // array_push($_SESSION['cart'], $result);
 // }
-$_SESSION['cart'].= " ". $result ;
+if($_SESSION['cart']== null){
+  $_SESSION['cart']= $result ;
+
+}
+else{
+  $_SESSION['cart'].= " ". $result ;
+
+}
 $cartToUpload = $_SESSION['cart'];
 $email = $_SESSION["email"];
 

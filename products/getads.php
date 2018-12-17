@@ -11,28 +11,41 @@ $email = $_SESSION["email"];
 
   $items =explode(" ",$cart);
 
-  foreach($items as $item){
+  if(!isset($_SESSION['search']) || $_SESSION['search'] == null ){
+    $stmt = $mysqli->prepare("SELECT * FROM ads where approved=1");
 
+  }
+  else{
+    $stmt = $mysqli->prepare("SELECT * FROM ads where name=? AND approved=1");
+    $stmt->bind_param("s",$_SESSION["search"]);
+  }
 
 
     $arr = [];
- if(!isset($_SESSION['search']) || $_SESSION['search'] == null ){
-   $stmt = $mysqli->prepare("SELECT * FROM ads where approved=1");
-
- }
- else{
-   $stmt = $mysqli->prepare("SELECT * FROM ads where name=? AND approved=1");
-   $stmt->bind_param("s",$_SESSION["search"]);
- }
     $stmt->execute();
     $result = $stmt->get_result();
     while($row = $result->fetch_assoc()) {
-    if($row["name"] != $item)
-      $arr[] = $row;
+ if (check($items , $row["name"]) == true){
+    $arr[] = $row;
+  }
+}
+
+
+function check ($cart , $name){
+  foreach ($cart as $item){
+    if ($item == $name){
+      return false;
     }
 
-    $stmt->close();
   }
+return true;
+
+}
+
+
+
+
+  $stmt->close();
 
 
 

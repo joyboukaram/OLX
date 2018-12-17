@@ -19,8 +19,16 @@ if (isset($_POST['result'])) {
 //   else{
 // array_push($_SESSION['cart'], $result);
 // }
-$_SESSION['cart'].= " ". $result ;
+if($_SESSION['cart']== null || $_SESSION['cart']== ""){
+  $_SESSION['cart']= $result ;
+
+}
+else{
+  $_SESSION['cart'].= " ". $result ;
+
+}
 $cartToUpload = $_SESSION['cart'];
+echo $cartToUpload ;
 $email = $_SESSION["email"];
 
 // $email="joseph@gmail.com" ;
@@ -29,6 +37,7 @@ $email = $_SESSION["email"];
 $stmt = $mysqli->prepare("Update users set cart = ? where email = ?");
 $stmt->bind_param("ss",$cartToUpload , $email);
 $stmt->execute();
+
 
 
 
