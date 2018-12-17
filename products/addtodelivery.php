@@ -10,12 +10,21 @@ if (isset($_POST['result'])) {
 }
 
 $email = $_SESSION["email"];
-$stmt = $mysqli->prepare("SELECT cart FROM users where email = ? ");
+$stmt = $mysqli->prepare("SELECT cart , delivery FROM users where email = ? ");
 $stmt->bind_param("s",$email);
 $stmt->execute();
 $stmt->store_result();
-$stmt->bind_result($cart);
+$stmt->bind_result($cart , $delivery);
 $stmt->fetch();
+
+
+
+if($delivery==null){
+  $delivery=$_SESSION["checked"];
+}
+else{
+  $delivery.=$_SESSION["checked"];
+}
 
 $items =explode(" ",$cart);
 $newcart=null;

@@ -151,9 +151,12 @@ while($count < count($arr)){
                             <ul>
                                 <?=$arr[$count]['description']?>
                             </ul>
+														  <?php if($arr[$count]["hideContact"]==0){
+?>
                             <h3 class="h3modal"><i>Seller:</i>
-                                <?=$arr[$count]['seller']?>
+                              <?=$arr[$count]['seller']?>
                             </h3>
+													<?php } ?>
                             <!-- <form id="addCart"> -->
 
                             <div id = "addCart">

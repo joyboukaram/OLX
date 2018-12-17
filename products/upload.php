@@ -110,9 +110,16 @@ echo $finallink ;
   	die("Error");
   }
 
+  if (isset($_POST['hidecontact'])) {
+      $hidecontact = $mysqli->real_escape_string($_POST['hidecontact']);
+  }else{
+    die("Error");
+  }
+
+
 $email= $_SESSION["email"];
-  $stmt = $mysqli->prepare("Insert INTO ads(name,price,description,location,categorie,image,seller) VALUES(?,?,?,?,?,?,?) ");
-  $stmt->bind_param("sssssss",$name,$price,$description,$location,$category,$finallink,$email);
+  $stmt = $mysqli->prepare("Insert INTO ads(name,price,description,location,categorie,image,seller,hideContact) VALUES(?,?,?,?,?,?,?,?) ");
+  $stmt->bind_param("sssssssi",$name,$price,$description,$location,$category,$finallink,$email,$hidecontact);
   $stmt->execute();
 
 	$_SESSION["done"] = true;

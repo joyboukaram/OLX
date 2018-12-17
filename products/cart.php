@@ -2,6 +2,9 @@
 <?php
 session_start();
 $price = 0;
+$_SESSION["price"]= null;
+$_SESSION["checked"]= null;
+
 
 ?>
 
@@ -134,7 +137,7 @@ while ($count < count($arr)) {
             </div>
             <div id="checkbox">
                 <form method="GET" name="Cart">
-                    <input class="checkbox" id="check" value="<?=$arr[$count]["price"]?>" type="checkbox" name="buy">
+                    <input class="checkbox" id="check" value="<?=$arr[$count]["price"]. " ". $arr[$count]["name"]?>" type="checkbox" name="buy">
                 </form>
             </div>
         </div>
@@ -148,7 +151,7 @@ $count++;
         <p id="price"></p>
     </div>
 
-    <form method = "POST" action ="">
+    <form method = "POST" action ="checkout.php">
         <input id = "checkout" type = "submit" value = "Checkout">
     </form>
 
